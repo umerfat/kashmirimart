@@ -491,7 +491,7 @@ html .ui-button.ui-state-disabled:active {
     overflow: hidden;
     width: 100%;
     margin-bottom: 30px;
-    background: #222;
+    /*background: #222;*/
 }
 
 .heading h3 {
@@ -501,19 +501,6 @@ html .ui-button.ui-state-disabled:active {
     height: 60px;
     display: inline-block;
     background: #0c0c0c;
-}
-
-.heading h3::after {
-    position: absolute;
-    top: 0px;
-    right: -66px;
-    content: '';
-    border-width: 33px;
-    border-style: solid;
-    border-top-color: rgba(0, 0, 0, 0);
-    border-right-color: rgba(0, 0, 0, 0);
-    border-left-color: #0c0c0c;
-    border-bottom-color: #0c0c0c;
 }
 
 .heading h3 i {
@@ -2659,4 +2646,9 @@ img.mfp-img {
         float: left !important;
         margin-bottom: 15px;
     }
+}
+
+p.price{
+    position: relative;
+    left: -105px;
 }
