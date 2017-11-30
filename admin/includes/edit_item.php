@@ -21,8 +21,8 @@ if (isset($_POST['update_item'])){
     $item_name        = $_POST['name'];
     $item_cat_id      = $_POST['category'];
     $item_status      = $_POST['status'];
-    $item_image       = $_POST['imagename']['name'];
-    $item_tmp_image   = $_POST['imagename']['tmp_name'];
+    $item_image       = $_FILES['imagename']['name'];
+    $item_tmp_image   = $_FILES['imagename']['tmp_name'];
     $item_description = $_POST['item_description'];
     $item_description = str_replace("'", "''", $item_description);
 
@@ -39,9 +39,9 @@ if (isset($_POST['update_item'])){
     $query  = "UPDATE tbl_item SET ";
     $query .= "item_cat_id ='{$item_cat_id}', ";
     $query .= "item_name = '{$item_name}', ";
-    $query .= "item_image = '{$item_image}' ";
+    $query .= "item_image = '{$item_image}', ";
     $query .= "item_description = '{$item_description}', ";
-    $query .= "item_status = '{$item_status}', ";
+    $query .= "item_status = '{$item_status}' ";
     $query .= " WHERE item_id = '{$edit_p_id}'";
 
     $update_query = mysqli_query($connection, $query);

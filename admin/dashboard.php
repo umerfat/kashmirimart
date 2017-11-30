@@ -30,17 +30,17 @@
                                     ?>
                                     <h3>Items</h3>
                                     <?php
-                                    $query = "SELECT * FROM tbl_item WHERE item_status = 'publish'";
+                                    $query = "SELECT * FROM tbl_item WHERE item_status = '1'";
                                     $select_query = mysqli_query($connection, $query);
-                                    $publish_count = mysqli_num_rows($select_query);
-                                    echo " <span class='count_bottom'><i class='green'>&nbsp;&nbsp;{$publish_count} </i>&nbsp; Items Published</span>";
+                                    $active_count = mysqli_num_rows($select_query);
+                                    echo " <span class='count_bottom'><i class='green'>&nbsp;&nbsp;{$active_count} </i>&nbsp; Items Active</span>";
                                     ?>
                                     <br>
                                     <?php
-                                    $query = "SELECT * FROM tbl_item WHERE item_status = 'draft'";
+                                    $query = "SELECT * FROM tbl_item WHERE item_status = '0'";
                                     $select_query = mysqli_query($connection, $query);
-                                    $count = mysqli_num_rows($select_query);
-                                    echo " <span class='count_bottom'><i class='green'>&nbsp;&nbsp;{$count} </i>&nbsp; Items Drafted</span>";
+                                    $inactive_count = mysqli_num_rows($select_query);
+                                    echo " <span class='count_bottom'><i class='green'>&nbsp;&nbsp;{$inactive_count} </i>&nbsp; Items Inactive</span>";
                                     ?>
                                 </div>
                             </div>
@@ -60,12 +60,7 @@
                                     echo " <span class='count_bottom'><i class='green'>&nbsp;&nbsp;{$count} </i>&nbsp; Admins</span>";
                                     ?>
                                     <br>
-                                    <?php
-                                    $query = "SELECT * FROM tbl_user";
-                                    $select_query = mysqli_query($connection, $query);
-                                    $count = mysqli_num_rows($select_query);
-                                    echo " <span class='count_bottom'><i class='green'>&nbsp;&nbsp;{$count} </i>&nbsp; Staff</span>";
-                                    ?>
+                                    <span class='count_bottom'><i class='green'>&nbsp;&nbsp;0</i>&nbsp; Staff</span>
                                 </div>
                             </div>
                             <div class="animated flipInY col-lg-4 col-md-4 col-sm-6 col-xs-12">
