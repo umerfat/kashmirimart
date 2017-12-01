@@ -30,10 +30,16 @@
                                        for="category">Add Sub Category <span
                                             class="required">*</span>
                                 </label>
-                                <div class="col-md-6 col-sm-6 col-xs-12">
+                                <div class="col-md-3 col-sm-12 col-xs-12">
                                     <input id="name" class="form-control col-md-7
                                     col-xs-12" name="sub_cat_name" placeholder="e.g Almond"
-                                           type="text">
+                                           type="text" required>
+                                </div>
+                                <div class="col-md-3 col-sm-6 col-xs-12">
+                                    <select class="form-control" name="category" required>
+                                        <option value="">Choose Category</option>
+                                        <?php add_item_category();?>
+                                    </select>
                                 </div>
                             </div>
                             <div class="form-group">

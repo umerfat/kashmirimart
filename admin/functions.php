@@ -228,8 +228,9 @@ function insert_sub_category(){
     if (isset($_POST['submit_sub_category'])) {
 
         $sub_cat_name = $_POST['sub_cat_name'];
+        $cat_id       = $_POST['category'];
 
-        if ($sub_cat_name == "" || empty($sub_cat_name)) {
+        if (empty($sub_cat_name)) {
 
             echo "
             <div class='col-md-12'>
@@ -240,11 +241,10 @@ function insert_sub_category(){
             </div>
             ";
         } else {
-            $query = "INSERT INTO tbl_sub_category(sub_cat_name) ";
-            $query .= "VALUES('{$sub_cat_name}')";
+            $query = "INSERT INTO tbl_sub_category(sub_cat_name,cat_id) ";
+            $query .= "VALUES('{$sub_cat_name}','{$cat_id}')";
             $create_sub_category_query = mysqli_query($connection, $query);
             if (!$create_sub_category_query) {
-
                 die("Query failed " . mysqli_error($connection));
             } else {
                 echo "
