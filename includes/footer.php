@@ -25,7 +25,7 @@
                         <ul class="list-default">
                             <li><a href="#"><i class="fa fa-angle-right"></i>Privacy Policy</a></li>
                             <li><a href="#"><i class="fa fa-angle-right"></i>FAQ</a></li>
-                            <li><a href="#"><i class="fa fa-angle-right"></i>Contact</a></li>
+                            <li><a href="contact.php"><i class="fa fa-angle-right"></i>Contact</a></li>
                             <li><a href="#"><i class="fa fa-angle-right"></i>BLog</a></li>
                             <li><a href="#"><i class="fa fa-angle-right"></i>Some other shit</a></li>
                         </ul>
