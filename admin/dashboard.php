@@ -67,13 +67,13 @@
                                 <div class="tile-stats">
                                     <div class="icon"><i class="fa fa-folder-o"></i></div>
                                     <?php
-                                    $count = recordCount('tbl_sub_category');
-                                    echo "<div class='count'>{$count}</div>";
+                                    $cat_count = recordCount('tbl_category');
+                                    echo "<div class='count'>{$cat_count}</div>";
                                     ?>
                                     <h3>Categories</h3><br><br>
                                     <?php
                                     //$query = "SELECT * FROM comments WHERE comment_status = 'approved'";
-                                    $count = recordCount('tbl_sub_category');
+                                    $cat_count = recordCount('tbl_category');
                                     //$count = mysqli_num_rows($select_query);
                                     // echo " <span class='count_bottom'><i class='green'>&nbsp;&nbsp;{$count} </i>&nbsp; Comments Approved</span>";
                                     ?>
@@ -83,8 +83,8 @@
                                 <div class="tile-stats">
                                     <div class="icon"><i class="fa fa-folder-o"></i></div>
                                     <?php
-                                    $category_count = recordCount('tbl_category');
-                                    echo "<div class='count'>{$category_count}</div>";
+                                    $sub_cat_count = recordCount('tbl_sub_category');
+                                    echo "<div class='count'>{$sub_cat_count}</div>";
                                     ?>
                                     <h3>Sub Categories</h3>
                                     <br>
