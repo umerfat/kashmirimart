@@ -2769,3 +2769,143 @@ p.price{
 .cat-text{
     margin-left: 20px;
 }
+
+.navbar-default .navbar-nav li ul li a {
+    margin-left: 10px;
+}
+
+.section-wrap {
+    padding: 80px 0;
+    overflow: hidden;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+@media (max-width: 991px) {
+    .section-wrap {
+        padding: 80px 0;
+        background-attachment: scroll !important;
+        background-position: 50% 50% !important;
+    }
+}
+
+.nopadding {
+    padding: 0 !important;
+}
+
+.hero-holder {
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    left: 0;
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+.hero-holder.right-align {
+    width: auto;
+    left: auto;
+    right: 12%;
+}
+
+.hero-holder.left-align {
+    width: auto;
+    left: 12%;
+}
+
+.hero-holder p {
+    margin-bottom: 5px;
+    font-size: 16px;
+}
+
+.hero-heading {
+    font-size: 62px;
+    font-weight: 700;
+    margin-bottom: 12px;
+}
+
+.hero-heading.large {
+    font-size: 110px;
+}
+
+.hero-subheading {
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.hero-lines {
+    margin-bottom: 34px;
+}
+
+.hero-lines:before, .hero-lines:after {
+    content: '';
+    display: inline-block;
+    height: 1px;
+    width: 185px;
+    background-color: #fff;
+}
+
+.hero-lines:before {
+    margin-bottom: 19px;
+}
+
+.hero-lines:after {
+    margin-top: 31px;
+}
+
+#flexslider-hero img {
+    max-height: 536px;
+}
+
+#flexslider-hero .img-holder {
+    position: absolute;
+    top: 0;
+    height: 536px;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+}
+
+#flexslider-hero .img-holder.img-1 {
+    background-image: url(../images/1.jpeg);
+}
+
+#flexslider-hero .img-holder.img-2 {
+    background-image: url(../images/2.jpeg);
+}
+
+#flexslider-hero .img-holder.img-3 {
+    background-image: url(../images/3.jpeg);
+}
+
+#flexslider-hero .img-holder.img-4 {
+    background-image: url(../images/4.jpeg);
+}
+
+.flex-control-nav {
+    bottom: 30px;
+    z-index: 2;
+}
+
+.flex-control-nav li {
+    margin: 0;
+}
+
+.flickity-page-dots .dot, .flex-control-paging li a {
+    height: 12px;
+    width: 12px;
+    opacity: 0.5;
+    margin: 0 5px;
+    border: 2px solid #fff;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    background: transparent;
+}

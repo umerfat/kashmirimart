@@ -15,9 +15,7 @@
     <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
     <!--magnific popup-->
     <link rel="stylesheet" type="text/css" href="css/magnific-popup/magnific-popup.css" media="screen" />
-    <!-- Owlcoursel -->
-    <link rel="stylesheet" type="text/css" href="css/owl-coursel/owl.carousel.css">
-    <link rel="stylesheet" type="text/css" href="css/owl-coursel/owl.theme.css">
+    <link rel="stylesheet" type="text/css" href="css/sliders.css">
     <!-- Main style -->
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <!-- Padding / Margin -->

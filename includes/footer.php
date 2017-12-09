@@ -64,11 +64,7 @@
 <script src="js/bootstrap/bootstrap.min.js"></script>
 <!--magnific popup-->
 <script src="js/magnific-popup/jquery.magnific-popup.min.js"></script>
-<!-- Jquery.counterup -->
-<script src="js/jquery.counterup/waypoints.min.js"></script>
-<script src="js/jquery.counterup/jquery.counterup.min.js"></script>
-<!-- Owl-coursel -->
-<script src="js/owl-coursel/owl.carousel.js"></script>
+<script src="js/plugins.js"></script>
 <!-- Script -->
 <script src="js/script.js"></script>
 </body>

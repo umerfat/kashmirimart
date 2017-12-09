@@ -32,11 +32,7 @@ $(function () {
             enabled: true
         }
     });
-    //Counterup
-    $('.counter').counterUp({
-        delay: 10,
-        time: 2000
-    });
+
     //Menu
     $('.navbar-toggle').on('click', function () {
         height_w();
@@ -67,4 +63,30 @@ $(function () {
         $(this).parents('.select-wrapper').find('button').text($(this).text());
     });
 
+    initFlexSlider();
+
 });
+
+function initFlexSlider() {
+    $('#flexslider-hero').flexslider({
+        animation: "fade",
+        controlNav: true,
+        directionNav: false,
+        touch: true,
+        slideshow: true,
+        slideshowSpeed: 4500,
+        prevText: ["<i class='fa fa-angle-left'></i>"],
+        nextText: ["<i class='fa fa-angle-right'></i>"]
+    });
+
+    // Flexslider
+    $('#flexslider').flexslider({
+        animation: "slide",
+        directionNav: true,
+        controlNav: false,
+        touch: true,
+        slideshow: false,
+        prevText: ["<i class='fa fa-angle-left'></i>"],
+        nextText: ["<i class='fa fa-angle-right'></i>"]
+    });
+}

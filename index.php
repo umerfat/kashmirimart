@@ -1,5 +1,7 @@
 <?php include "includes/header.php"; ?>
 
+<?php include "includes/slider.php"; ?>
+
 <!-- Main content -->
 <div id="wrap-body">
     <div class="container">
