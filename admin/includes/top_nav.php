@@ -18,10 +18,10 @@
                             $user_image = $row['user_image'];
 
                             if (empty($user_image)){
-                                echo "<img src='/USER_IMAGES/default_image.png' alt='no image'>" . $_SESSION['username'];
+                                echo "<img src='USER_IMAGES/default_image.png' alt='no image'>" . $_SESSION['username'];
                             }
                             else{
-                                echo "<img src='/USER_IMAGES/$user_image' alt='no image'>" . $_SESSION['username'];
+                                echo "<img src='USER_IMAGES/$user_image' alt='no image'>" . $_SESSION['username'];
                             }
                         ?>
                         <span class=" fa fa-angle-down"></span>

@@ -32,8 +32,11 @@
             <div class="navbar-collapse collapse sidebar-navbar-collapse">
                 <h4 class="cat-text">Categories</h4>
                 <ul class="nav navbar-nav" id="sidenav01">
-                    <li class="active">
-                        <a href="#" data-toggle="collapse" data-target="#toggleDemo" data-parent="#sidenav01" class="collapsed">Cat Sub 1 <span class="caret pull-right"></span>
+                    <?php
+                    for ($i=0; $i < 4; $i++) { 
+                        ?>
+                        <li class="active">
+                        <a href="" data-toggle="collapse" data-target="#toggleDemo" data-parent="#sidenav01" class="collapsed">Cat Sub 1 <span class="caret pull-right"></span>
                         </a>
                         <div class="collapse" id="toggleDemo" style="height: 0px;">
                             <ul class="nav nav-list">
@@ -43,6 +46,9 @@
                             </ul>
                         </div>
                     </li>
+                        <?php
+                     } 
+                    ?>
                     <li>
                         <a href="#" data-toggle="collapse" data-target="#toggleDemo2" data-parent="#sidenav01" class="collapsed">Cat sub 2 <span class="caret pull-right"></span>
                         </a>
