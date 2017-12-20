@@ -1,4 +1,5 @@
 <?php include "includes/header.php"; ?>
+<?php include "admin/database.php"; ?>
 
 <?php include "includes/slider.php"; ?>
 
