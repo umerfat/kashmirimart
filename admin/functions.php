@@ -392,3 +392,40 @@ function recordCount($table){
     $count_rows = mysqli_num_rows($select_query);
     return $count_rows;
 }
+
+// Functions for front end to display information to customers
+
+function get_category(){
+
+    global $connection;
+    $select_cat = "SELECT * FROM tbl_category";
+    $result = mysqli_query($connection, $select_cat);
+    $catArray = array();
+    while($row = mysqli_fetch_assoc($result)) {
+        $catArray[] = $row;
+    }
+    foreach ($catArray as $cat) {
+        //print_r($catArray);
+        $cat_id   = trim($cat['cat_id']);
+        $cat_name = trim($cat['cat_name']);
+    echo "<li class='active'>";
+       echo " <a href='javascript:void(0)' data-toggle='collapse' data-target='#toggleDemo' data-parent='#sidenav01' class='collapsed'>$cat_name<span class='caret pull-right'></span>
+        </a>";
+        echo "<div class='collapse' id='toggleDemo' style='height: 0px;'>
+            <ul class='nav nav-list'> " ;
+                 $select_sub_cat = "SELECT * FROM tbl_sub_category WHERE cat_id = $cat_id";
+                 $subCatArray = array();
+                 $result_sub = mysqli_query($connection, $select_sub_cat);
+                 while($sub_row = mysqli_fetch_assoc($result_sub)) {
+                  $subCatArray[] = $sub_row;
+                 }
+                 foreach ($subCatArray as $sub_cat) {
+                    $sub_cat_id   = trim($sub_cat['sub_cat_id']);
+                    $sub_cat_name = trim($sub_cat['sub_cat_name']);
+                    echo "<li><a href=''>$sub_cat_name</a></li>";
+                 }
+        echo "</ul>";   
+        echo "</div>";
+    echo "</li>";
+      }
+}  

@@ -1,6 +1,6 @@
 <?php include "includes/header.php"; ?>
 <?php include "admin/database.php"; ?>
-
+<?php include "admin/functions.php";?>
 <?php include "includes/slider.php"; ?>
 
 <!-- Main content -->
