@@ -38,6 +38,7 @@
 <script src="vendors/jszip/dist/jszip.min.js"></script>
 <script src="vendors/pdfmake/build/pdfmake.min.js"></script>
 <script src="vendors/pdfmake/build/vfs_fonts.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/bootstrap-validator/0.4.5/js/bootstrapvalidator.min.js"></script>
 
 <!-- DateJS -->
 <script src="vendors/DateJS/build/date.js"></script>
