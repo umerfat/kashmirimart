@@ -159,7 +159,7 @@
                                 </div>
 
                             </div>
-                            <nav aria-label="Page navigation">
+                            <nav aria-label="Page navigation" style="text-align: right">
                                 <ul class="pagination ht-pagination">
                                     <li>
                                         <a href="#" aria-label="Previous">
