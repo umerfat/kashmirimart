@@ -1,10 +1,14 @@
+<?php include "admin/database.php"; ?>
+<?php include "admin/functions.php";?>
 <!DOCTYPE html>
 <html lang="zxx">
-
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="KashmiriMart is your own Mart where in you can search for any item which is purely from kashmir. We most deal with Kashmiri dryfruits, all varieties of Kashmiri Saffron, Kashmiri Apples, Hand made kashmiri Shawls, Pure Kashmiri Honey and many more">
+    <meta name="keywords" content="KashmiriMart, Dryfruits, Saffron, Kashmir, Kashmiri Shawls, Kashmiri Apples">
+    <meta name="author" content="Umer Hurrah">
     <title>DryFruits</title>
     <link rel="icon" href="">
     <!-- JqueryUI -->
@@ -34,7 +38,10 @@
             <div class="row">
                 <!-- Logo -->
                 <div class="col-md-3 col-lg-3">
-                    <a href="" class="logo"><img src="images/logo.png" alt="logo"></a>
+                    <a href="" class="logo">
+                        <span>Dryfruits Mart</span>
+<!--                        <img src="images/logo.png" alt="logo">-->
+                    </a>
                 </div>
                 <div class="col-md-9 col-lg-9">
                     <div class="clearfix"></div>

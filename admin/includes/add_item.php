@@ -5,12 +5,12 @@ if (isset($_POST['add_item'])) {
 ?>
 <form class="form-label-left" action="" id="add-labour-admin" method="post"
       enctype="multipart/form-data">
-      <div class="item form-group">
-          <div class="col-md-6 col-sm-12 col-xs-12">
-              <input id="tName" class="form-control col-md-7 col-xs-12"
-                     name="name" placeholder="Item Name " type="text" required>
-          </div>
+    <div class="item form-group">
+      <div class="col-md-6 col-sm-12 col-xs-12">
+          <input id="tName" class="form-control col-md-7 col-xs-12"
+                 name="name" placeholder="Item Name " type="text" pattern="[^A-Za-z0-9]" required>
       </div>
+    </div>
     <div class="item form-group">
         <div class="col-md-6 col-sm-12 col-xs-12">
             <select class="form-control" name="status">
@@ -20,7 +20,8 @@ if (isset($_POST['add_item'])) {
             </select>
         </div>
     </div>
-    <div class="item form-group">
+    <div class="clearfix"></div>
+    <div class="item form-group mt-10">
         <div class="col-md-6 col-sm-12 col-xs-12">
             <select class="form-control" name="sub_category" required>
                 <option value="">Choose Category</option>
@@ -34,7 +35,8 @@ if (isset($_POST['add_item'])) {
             col-xs-12">
         </div>
     </div>
-    <div class="item form-group">
+    <div class="clearfix"></div>
+    <div class="item form-group mt-10">
         <div class="col-md-6 col-sm-12 col-xs-12">
             <textarea name="description" id="description" cols="30" rows="6" class="form-control col-md-7 col-xs-12" placeholder="Description"></textarea>
         </div>

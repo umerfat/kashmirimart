@@ -24,7 +24,7 @@
                         <?php insert_sub_category(); ?>
 
                         <form class="form-horizontal form-label-left" method="post"
-                              id="add-category-form">
+                              id="add-sub-category-form">
                             <div class="item form-group">
                                 <label class="control-label col-md-3 col-sm-3 col-xs-12"
                                        for="category">Add Sub Category <span

@@ -1,36 +1,3 @@
-/*
-
-Table of Contents
-	01.Menu
-	02.Top Header
-	03.Heading
-	04.Button
-	05.from
-	06.Hover Image
-	07.Owl slider
-	08.Service
-	09.Blog
-	10.Blog date
-	11.Share-post
-	12.List-comment
-	13.Category
-	14.Product
-	15. Mfp-popup
-	16.Panel
-	17.List-default
-	18.Block-fv
-	19.Logo brand
-	20.Newsletter
-	21.Ht-tabs
-	22.Ht-pagination
-	23.Ht-breadcrumbs
-	24.Rating
-	25.Error_404
-	26.Preloader
-	27.Footer
-	28.Color
--------------------*/
-
 * {
     color: #333;
 }
@@ -97,7 +64,7 @@ p {
 
 .top-header ul li.cart-icon ul.cart-dropdown li .product-item p strong,
 .top-header ul li .cart-dropdown li .price {
-    color: #d11717;
+    color: rgba(219,151,82,1);
 }
 
 .top-header ul li.cart-icon ul.cart-dropdown li .product-item .product-img,
@@ -110,7 +77,7 @@ p {
 }
 
 .top-header ul li.cart-icon ul.cart-dropdown li .ht-btn:hover {
-    background: #d11717;
+    background: rgba(219,151,82,1);
     color: #fff;
 }
 
@@ -131,12 +98,12 @@ p {
 }
 
 .heading-1 {
-    border-bottom: 2px solid #eee;
+    /*border-bottom: 2px solid #eee;*/
 }
 
 .heading-1 h3,
 .heading-1 h4 {
-    border-bottom: 2px solid #ccc;
+    /*border-bottom: 2px solid #ccc;*/
 }
 
 .heading-1 i {
@@ -252,128 +219,6 @@ p {
 }
 
 
-/*--- 07.Owl slider ---*/
-
-.owl-theme .owl-controls .owl-buttons .owl-prev,
-.owl-theme .owl-controls .owl-buttons .owl-next {
-    color: #999;
-    background: #eee;
-}
-
-.owl-theme .owl-controls .owl-buttons div:hover {
-    background: #d11717;
-    color: #fff;
-}
-
-
-/*--- 08.Service ---*/
-
-.list-service {
-    background: #f5f5f5;
-}
-
-.list-service ul li {
-    background: #fafafa;
-}
-
-.list-service ul li a {
-    background: #eee;
-    color: #333;
-}
-
-.list-service ul li a::after {
-    border-top-color: #fafafa;
-    border-right-color: #fafafa;
-}
-
-
-/*--- 09.Blog ---*/
-
-.blog-item {
-    background: #f5f5f5;
-}
-
-.blog-item .blog-caption .blog-heading {
-    color: #333;
-}
-
-.blog-item .blog-caption .blog-heading a:hover {
-    color: #d11717;
-}
-
-.blog-item p {
-    color: #555;
-}
-
-
-/*--- 10.Blog date ---*/
-
-.blog-date li a {
-    border-right-color: #ccc;
-    color: #555;
-}
-
-.blog-date li a i {
-    color: inherit;
-}
-
-
-/*--- 11.Share-post ---*/
-
-.share-post {
-    border-top: 1px solid #eee;
-    border-bottom: 1px solid #eee;
-}
-
-.share-post ul li a {
-    color: #999;
-}
-
-.share-post ul li a:hover {
-    color: #d11717;
-}
-
-
-/*--- 12.List-comment ---*/
-
-.list-comment .comment-item .comment-img {
-    border: 5px solid #eee;
-}
-
-.list-comment .comment-item .comment-txt p,
-.list-comment .comment-item .comment-txt .reply,
-.list-comment .more-comment,
-.list-comment .comment-item span {
-    color: #999;
-}
-
-.list-comment .more-comment,
-.list-comment .comment-item .comment-txt {
-    background: #fff;
-    border-color: #f5f5f5;
-}
-
-.list-comment .comment-item .comment-txt .comment-item .comment-txt {
-    background: #f5f5f5;
-}
-
-.list-comment .comment-item .comment-txt::after,
-.list-comment .comment-item .comment-txt::before {
-    border-bottom-color: #fff;
-}
-
-.list-comment .comment-item .comment-txt .comment-item .comment-txt::after {
-    border-bottom-color: #f5f5f5;
-}
-
-.list-comment .comment-item .comment-heading h5 {
-    text-transform: capitalize;
-    color: #555;
-    padding-bottom: 5px;
-    font-size: 15px;
-}
-
-
 /*--- 13.Product_category ---*/
 
 .category .heading,
@@ -399,7 +244,7 @@ p {
 .category ul li a:hover,
 .category ul li.active a i,
 .category ul li a:hover i {
-    background: #d11717;
+    background: rgba(219,151,82,1);
     color: #fff;
 }
 
@@ -416,7 +261,7 @@ p {
 }
 
 .product-item .product-caption .product-name a:hover {
-    color: #d11717;
+    color: rgba(219,151,82,1);
 }
 
 .product-list .product-item {
@@ -429,7 +274,7 @@ p {
 }
 
 .product-item .product-caption .product-price {
-    color: #d11717;
+    color: rgba(219,151,82,1);
 }
 
 .product-item .product-caption .product-txt {
@@ -459,7 +304,7 @@ p {
 }
 
 .product-grid-2 .product-caption .product-name span {
-    background: #d11717;
+    background: rgba(219,151,82,1);
     color: #fff;
 }
 
@@ -521,7 +366,7 @@ p {
 }
 
 .cart-item .product-name span {
-    color: #d11717;
+    color: rgba(219,151,82,1);
 }
 
 
@@ -605,7 +450,7 @@ ul.ht-pagination li a:hover,
 ul.ht-pagination li a:focus,
 ul.ht-pagination li a:active,
 ul.ht-pagination li a:hover span i {
-    background: #d11717;
+    background: rgba(219,151,82,1);
     color: #fff;
 }
 
@@ -659,7 +504,7 @@ ul.rating>li i:hover {
 }
 
 .error_404 a {
-    color: #d11717;
+    color: rgba(219,151,82,1);
 }
 
 

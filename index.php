@@ -14,48 +14,46 @@
                    <?php
                   if (isset($_POST['submit_search']) AND !empty($_POST['search_item'])) {
 
-                    $search_key   = htmlentities($_POST['search_item']);
-                    $search_query = "SELECT * FROM tbl_item WHERE item_name LIKE '%s$search_key%s' OR item_price LIKE '%ssearch_key%s' ";
-                    $search_result = mysqli_query($connection,$search_query) or printf(mysqli_error($connection));
-                    if (mysqli_num_rows($search_result) < 1) {
+                    // $search_key   = htmlentities($_POST['search_item']);
+                    // $search_query = "SELECT * FROM tbl_item WHERE item_name LIKE '%s$search_key%s' OR item_price LIKE '%ssearch_key%s' ";
+                    // $search_result = mysqli_query($connection,$search_query) or printf(mysqli_error($connection));
+                    // if (mysqli_num_rows($search_result) < 1) {
 
-                        echo "No match found for your search ";
-                    }
-                    else{
-                      $labour_table = array();
-                      while ($row = mysqli_fetch_assoc($query_result)) {
-                          $labour_table[] = $row;
-                      }
+                    //     echo "No match found for your search ";
+                    // }
+                    // else{
+                    //   $labour_table = array();
+                    //   while ($row = mysqli_fetch_assoc($query_result)) {
+                    //       $labour_table[] = $row;
+                    //   }
                       
-                    }
-                    ?>
-
-                    <?php
+                    // }
+                    
                   }
                   else{
                      if (empty($_GET['sub_category'])) {
                     ?>
                      <div class="col-sm-8 col-md-9 col-lg-9">
                         <div class="product product-grid">
-                             <?php
+                            <div class="row">
+                               <?php
                              $select_random = "SELECT * FROM tbl_item order by rand() limit 10";
 
                              // $select_random = "SELECT a.* FROM tbl_item a, (SELECT max(item_id)*rand() randid  FROM tbl_item) b  WHERE a.item_id >= b.randid limit 3";
                              $random_result = mysqli_query($connection, $select_random);
                                 while($row_random = mysqli_fetch_assoc($random_result)) {
 
+                                    $item_id     = trim($row_random['item_id']) + 2323;
                                     $item_name   = trim($row_random['item_name']);
                                     $item_price  = trim($row_random['item_price']);
                                     $item_image  = trim($row_random['item_image']); 
                                     ?>
-                            <div class="row">
-                               
                                     <div class="col-sm-6 col-md-4 col-lg-4">
                                         <!-- Product item -->
                                         <div class="product-item">
-                                            <a href="item.php" class="product-img"><img src=<?php echo "admin/ITEM_IMAGES/".$item_image ?> alt="image"></a>
+                                            <a href="item.php?item_details=<?php echo $item_id?>" class="product-img"><img src=<?php echo "admin/ITEM_IMAGES/".$item_image ?> alt="image"></a>
                                             <div class="product-caption">
-                                                <h4 class="product-name"><a href="item.php"> <?php echo $item_name ?></a></h4>
+                                                <h4 class="product-name"><a href="item.php?item_details=<?php echo $item_id?>"> <?php echo $item_name ?></a></h4>
                                                 <ul class="rating">
                                                     <li class="active"><i class="fa fa-star"></i></li>
                                                     <li class="active"><i class="fa fa-star"></i></li>
@@ -74,7 +72,7 @@
                                 }
                                 ?>
                             </div>
-                            <nav aria-label="Page navigation">
+                            <!-- <nav aria-label="Page navigation">
                                 <ul class="pagination ht-pagination">
                                     <li>
                                         <a href="#" aria-label="Previous">
@@ -92,7 +90,7 @@
                                         </a>
                                     </li>
                                 </ul>
-                            </nav>
+                            </nav> -->
                         </div>
                     </div>
                     <?php
@@ -105,7 +103,6 @@
                              $sub_cat_id = htmlentities($_GET['sub_category']);
                              //$sub_cat_id = base64_decode($sub_cat_id);
                              $sub_cat_id = $sub_cat_id - 1375;
-                             echo $sub_cat_id;
                              $select_random = "SELECT * FROM tbl_item WHERE item_sub_cat_id = $sub_cat_id";
                              // $select_random = "SELECT a.* FROM tbl_item a, (SELECT max(item_id)*rand() randid  FROM tbl_item) b  WHERE a.item_id >= b.randid limit 3";
                              $random_result = mysqli_query($connection, $select_random);
@@ -143,7 +140,7 @@
                   }
                                 ?>
                             </div>
-                            <nav aria-label="Page navigation">
+                            <nav aria-label="Page navigation" style="text-align: right">
                                 <ul class="pagination ht-pagination">
                                     <li>
                                         <a href="#" aria-label="Previous">

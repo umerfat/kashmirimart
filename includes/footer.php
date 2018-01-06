@@ -6,11 +6,10 @@
             <div class="bg-gray-1 p-l-r">
                 <div class="row">
                     <!-- Company info -->
-                    <div class="col-xs-12 col-sm-4 col-md-4">
+                    <div class="col-xs-12 col-sm-4 col-md-4 center border-right">
                         <div class="heading-1">
                             <h3>Company Info</h3>
                         </div>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod temp incidunt ut .</p>
                         <ul class="list-default">
                             <li><i class="fa fa-signal"></i>Jammu and Kashmir</li>
                             <li><i class="fa fa-phone"></i>+91 9874561234</li>
@@ -18,16 +17,26 @@
                         </ul>
                     </div>
                     <!-- Quick link -->
-                    <div class="col-xs-12 col-sm-4 col-md-4">
+                    <div class="col-xs-12 col-sm-4 col-md-4 center border-right">
                         <div class="heading-1">
                             <h3>Links</h3>
                         </div>
                         <ul class="list-default">
-                            <li><a href="#"><i class="fa fa-angle-right"></i>Privacy Policy</a></li>
-                            <li><a href="#"><i class="fa fa-angle-right"></i>FAQ</a></li>
-                            <li><a href="contact.php"><i class="fa fa-angle-right"></i>Contact</a></li>
-                            <li><a href="#"><i class="fa fa-angle-right"></i>BLog</a></li>
-                            <li><a href="#"><i class="fa fa-angle-right"></i>Some other shit</a></li>
+                            <li><a href="#">Privacy Policy</a></li>
+                            <li><a href="#">FAQ</a></li>
+                            <li><a href="contact.php">Contact</a></li>
+                            <li><a href="#">BLog</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-xs-12 col-sm-4 col-md-4 center mt-20">
+                        <div class="heading-1">
+                            <h3>Contact</h3>
+                        </div>
+                        <ul class="list-default">
+                            <li><a href="#">Some contact</a></li>
+                            <li><a href="contact.php">\Contact</a></li>
+                            <li><a href="#">BLog</a></li>
+                            <li><a href="#">Some other shit</a></li>
                         </ul>
                     </div>
                 </div>
