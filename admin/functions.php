@@ -55,7 +55,7 @@ function add_item(){
     if (isset($_POST['add_item'])){
 
         $item_name        = clean($_POST['name']);
-        $item_category_id = clean($_POST['category']);
+        $item_sub_cat_id  = clean($_POST['sub_category']);
         $item_status      = clean($_POST['status']);
         $item_image       = $_FILES['image']['name'];
         $item_tmp_image   = $_FILES['image']['tmp_name'];
@@ -64,8 +64,8 @@ function add_item(){
 
         move_uploaded_file($item_tmp_image, "ITEM_IMAGES/$item_image");
 
-        $query  = "INSERT INTO tbl_item(item_cat_id, item_name, item_image, item_description, item_status) ";
-        $query .= "VALUES({$item_category_id}, '{$item_name}', '{$item_image}', '{$item_description}', '{$item_status}')";
+        $query  = "INSERT INTO tbl_item(item_sub_cat_id, item_name, item_image, item_description, item_status) ";
+        $query .= "VALUES({$item_sub_cat_id}, '{$item_name}', '{$item_image}', '{$item_description}', '{$item_status}')";
 
         $insert_query = mysqli_query($connection, $query);
         if (!$insert_query){
@@ -85,20 +85,47 @@ function add_item(){
     }
 }
 
-function add_item_category(){
-
+function add_category(){
     global $connection;
     $query = "SELECT * FROM tbl_category";
     $category_query = mysqli_query($connection, $query);
     if (!$category_query){
-
         die("Query failed " . mysqli_error($connection));
     }
     while ($row = mysqli_fetch_assoc($category_query)){
-
         $cat_id = $row['cat_id'];
         $cat_name = $row['cat_name'];
         echo "<option value='{$cat_id}'>{$cat_name}</option>";
+    }
+}
+
+function add_item_category(){
+
+    global $connection;
+    $query_cat = "SELECT cat_id, cat_name FROM tbl_category";
+    $cat_result = mysqli_query($connection, $query_cat);
+    if (!$cat_result){
+
+        die("Query failed " . mysqli_error($connection));
+    }
+    while ($row_cat = mysqli_fetch_assoc($cat_result)){
+
+        $cat_id   = trim($row_cat['cat_id']);
+        $cat_name = trim($row_cat['cat_name']);
+
+        $query_sub_cat = "SELECT sub_cat_id, sub_cat_name FROM  tbl_sub_category WHERE cat_id = '{$cat_id}'";
+        $sub_cat_result = mysqli_query($connection, $query_sub_cat);
+        if (mysqli_num_rows($sub_cat_result) > 0) {
+                    echo "<option style ='font-weight: bold;font-size:17px' value='{$cat_id}' disabled>{$cat_name}</option>";
+
+        }   
+        while ($row_cat_sub = mysqli_fetch_assoc($sub_cat_result)) {
+
+            $sub_cat_id   = trim($row_cat_sub['sub_cat_id']);
+            $sub_cat_name = trim($row_cat_sub['sub_cat_name']);
+            echo "<option value='{$sub_cat_id}'>{$sub_cat_name}</option>";
+        }
+
     }
 }
 //Add User
@@ -404,14 +431,16 @@ function get_category(){
     while($row = mysqli_fetch_assoc($result)) {
         $catArray[] = $row;
     }
+    $i = 0;
     foreach ($catArray as $cat) {
         //print_r($catArray);
         $cat_id   = trim($cat['cat_id']);
         $cat_name = trim($cat['cat_name']);
     echo "<li class='active'>";
-       echo " <a href='javascript:void(0)' data-toggle='collapse' data-target='#toggleDemo' data-parent='#sidenav01' class='collapsed'>$cat_name<span class='caret pull-right'></span>
+    ++$i;
+       echo " <a href='javascript:void(0)' data-toggle='collapse' data-target='#toggleDemo-$i' data-parent='#sidenav01' class='collapsed'>$cat_name<span class='caret pull-right'></span>
         </a>";
-        echo "<div class='collapse' id='toggleDemo' style='height: 0px;'>
+        echo "<div class='collapse' id='toggleDemo-$i' style='height: 0px;'>
             <ul class='nav nav-list'> " ;
                  $select_sub_cat = "SELECT * FROM tbl_sub_category WHERE cat_id = $cat_id";
                  $subCatArray = array();
@@ -419,10 +448,17 @@ function get_category(){
                  while($sub_row = mysqli_fetch_assoc($result_sub)) {
                   $subCatArray[] = $sub_row;
                  }
-                 foreach ($subCatArray as $sub_cat) {
+                 if (sizeof($subCatArray) < 1) {
+                     echo "<p>No sub category found</p>";
+                 }
+                 else{
+                    foreach ($subCatArray as $sub_cat) {
                     $sub_cat_id   = trim($sub_cat['sub_cat_id']);
                     $sub_cat_name = trim($sub_cat['sub_cat_name']);
-                    echo "<li><a href=''>$sub_cat_name</a></li>";
+                    $sub_cat      = $sub_cat_id +1375;
+                    //$sub_cat      = base64_encode($sub_cat_id);
+                    echo "<li><a href='index.php?sub_category=$sub_cat'>$sub_cat_name</a></li>";
+                 }
                  }
         echo "</ul>";   
         echo "</div>";

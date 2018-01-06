@@ -19,7 +19,7 @@ if (isset($_GET['p_id'])){
 if (isset($_POST['update_item'])){
 
     $item_name        = $_POST['name'];
-    $item_cat_id      = $_POST['category'];
+    $item_sub_cat_id      = $_POST['sub_category'];
     $item_status      = $_POST['status'];
     $item_image       = $_FILES['imagename']['name'];
     $item_tmp_image   = $_FILES['imagename']['tmp_name'];
@@ -37,7 +37,7 @@ if (isset($_POST['update_item'])){
     }
 
     $query  = "UPDATE tbl_item SET ";
-    $query .= "item_cat_id ='{$item_cat_id}', ";
+    $query .= "item_sub_cat_id ='{$item_sub_cat_id}', ";
     $query .= "item_name = '{$item_name}', ";
     $query .= "item_image = '{$item_image}', ";
     $query .= "item_description = '{$item_description}', ";
@@ -76,7 +76,7 @@ if (isset($_POST['update_item'])){
     <div class="item form-group">
         <label class="control-label col-md-1 col-sm-12 col-xs-12" for="category">Category </label>
         <div class="col-md-10 col-sm-12 col-xs-12">
-            <select class="form-control" name="category">
+           <!--  <select class="form-control" name="category">
                 <?php
                 $query = "SELECT * FROM tbl_category";
                 $category_query = mysqli_query($connection, $query);
@@ -93,6 +93,10 @@ if (isset($_POST['update_item'])){
                     }
                 }
                 ?>
+            </select> -->
+            <select class="form-control" name="sub_category" required>
+                <option value="">Choose Category</option>
+                <?php add_item_category();?>
             </select>
         </div>
     </div>
@@ -101,8 +105,16 @@ if (isset($_POST['update_item'])){
         <label class="control-label col-md-1 col-sm-12 col-xs-12" for="status">Status </label>
         <div class="col-md-10 col-sm-12 col-xs-12">
             <select class="form-control" name="status">
-                <option value='<?php echo $item_status; ?>'><?php echo ucfirst
-                    ($item_status); ?></option>
+                <?php 
+                if($item_status == 1){
+                    echo "<option value='<?php echo $item_status; ?>'>Active</option>";
+
+                }
+                else{
+                    echo "<option value='<?php echo $item_status; ?>'>Inactive</option>";
+                }
+                 ?>
+                }
                 <?php
                 if ($item_status == '1'){
                     echo "<option value='0'>Inactive</option>";

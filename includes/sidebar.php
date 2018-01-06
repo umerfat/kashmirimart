@@ -1,3 +1,5 @@
+<?php include "admin/database.php"; ?>
+<?php include "admin/functions.php";?>
 <div class="affix-sidebar">
     <div class="sidebar-nav">
         <div class="navbar navbar-default" role="navigation">
