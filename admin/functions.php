@@ -457,7 +457,7 @@ function get_category(){
                     $sub_cat_name = trim($sub_cat['sub_cat_name']);
                     $sub_cat      = $sub_cat_id +1375;
                     //$sub_cat      = base64_encode($sub_cat_id);
-                    echo "<li><a href='index.php?sub_category=$sub_cat'>$sub_cat_name</a></li>";
+                    echo "<li><a href='category.php?sub_category=$sub_cat'>$sub_cat_name</a></li>";
                  }
                  }
         echo "</ul>";   

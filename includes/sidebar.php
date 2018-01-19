@@ -11,7 +11,7 @@
                 </button>
                 <span class="visible-xs navbar-brand">Categories</span>
             </div>
-            <div class="navbar-collapse collapse sidebar-navbar-collapse">
+            <div class="navbar-collapse collapse sidebar-navbar-collapse"  id="redirect">
                 <h4 class="cat-text">Categories</h4>
                 <ul class="nav navbar-nav" id="sidenav01">
 
