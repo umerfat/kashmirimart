@@ -942,7 +942,9 @@ a.ht-btn-3x {
 }
 
 .product-item .product-img img {
-    width: 100%;
+    /*width: 100%;*/
+    width: 320px;
+    height: 320px;
 }
 
 .product-item .product-caption .product-name {
@@ -2213,6 +2215,12 @@ p.price{
     }
 }
 
+@media (max-width: 767px){
+    .navbar-toggle {
+    	background: rgba(219,151,82,1) !important;
+	}	
+}
+
 @media (min-width: 992px){
     .affix-content .container {
         width: 900px;
@@ -2408,4 +2416,9 @@ p.price{
     -webkit-border-radius: 50%;
     border-radius: 50%;
     background: transparent;
+}
+
+@media (max-width: 767px)
+.navbar-toggle {
+    background: none;
 }
