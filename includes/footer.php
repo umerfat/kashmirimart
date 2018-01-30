@@ -11,32 +11,33 @@
                             <h3>Company Info</h3>
                         </div>
                         <ul class="list-default">
+                             <li><i class="fa fa-signal"></i><a href="index.php">KashmiriMart</a></li>
                             <li><i class="fa fa-signal"></i>Jammu and Kashmir</li>
                             <li><i class="fa fa-phone"></i>+91 9874561234</li>
-                            <li><i class="fa fa-envelope-o"></i>umer@gmail.com</li>
+                            <li><i class="fa fa-envelope-o"></i>Geeimran16@gmail.com</li>
                         </ul>
                     </div>
                     <!-- Quick link -->
                     <div class="col-xs-12 col-sm-4 col-md-4 center border-right">
                         <div class="heading-1">
-                            <h3>Links</h3>
+                            <h3>Mostly Deals In</h3>
                         </div>
                         <ul class="list-default">
-                            <li><a href="#">Privacy Policy</a></li>
-                            <li><a href="#">FAQ</a></li>
-                            <li><a href="contact.php">Contact</a></li>
-                            <li><a href="#">BLog</a></li>
+                            <li><a href="#">Dry Fruits</a></li>
+                            <li><a href="#">Kashmiri Shawls</a></li>
+                            <li><a href="#">Kashmiri Saffron</a></li>
+                            <li><a href="#">Kashmiri Apples</a></li>
                         </ul>
                     </div>
                     <div class="col-xs-12 col-sm-4 col-md-4 center mt-20">
                         <div class="heading-1">
-                            <h3>Contact</h3>
+                            <h3>About KashmiriMart</h3>
                         </div>
                         <ul class="list-default">
-                            <li><a href="#">Some contact</a></li>
-                            <li><a href="contact.php">\Contact</a></li>
-                            <li><a href="#">BLog</a></li>
-                            <li><a href="#">Some other shit</a></li>
+                            <li><a href="contact.php">Contact</a></li>
+                            <li><a href="about.php">About Us</a></li>
+                            <li><a href="#">Pivacy Policy</a></li>
+                            <li><a href="#">FAQ</a></li>
                         </ul>
                     </div>
                 </div>
@@ -49,7 +50,7 @@
             <div class="bg-gray-0c p-l-r">
                 <div class="row">
                     <div class="col-md-6">
-                        <p>© 2017 Designed by <a href="">vakadu</a>. All rights reserved</p>
+                        <p>© 2017 Designed by <a href="">Vakadu And </a><a href="">Umer Hurrah</a>. All rights reserved</p>
                     </div>
                     <div class="col-md-6">
                         <ul class="social-icon list-inline pull-right">

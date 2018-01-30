@@ -63,16 +63,16 @@ if (isset($_POST['checkBoxArray'])){
 
         <?php
 
-        $query  = "SELECT item_id, item_cat_id, item_name, item_image, item_description, item_status,created_date FROM tbl_item";
+        $query  = "SELECT item_id, item_sub_cat_id, item_name, item_image, item_description, item_status,created_date FROM tbl_item";
         $select_items = mysqli_query($connection, $query);
         while ($row = mysqli_fetch_assoc($select_items)){
 
-            $item_id     = $row['item_id'];
-            $item_name   = $row['item_name'];
-            $item_cat_id = $row['item_cat_id'];
-            $item_image  = $row['item_image'];
+            $item_id         = $row['item_id'];
+            $item_name       = $row['item_name'];
+            $item_sub_cat_id = $row['item_sub_cat_id'];
+            $item_image      = $row['item_image'];
             //$item_status = $row['item_description'];
-            $item_date   = $row['created_date'];
+            $item_date       = $row['created_date'];
             echo "<tr>";
 
             ?>
@@ -85,7 +85,7 @@ if (isset($_POST['checkBoxArray'])){
             echo "<td>{$item_id}</td>";
             echo "<td>{$item_name}</td>";
             echo "<td><img src='ITEM_IMAGES/{$item_image}' height='40px'></td>";
-            echo "<td>{$item_cat_id}</td>";
+            echo "<td>{$item_sub_cat_id}</td>";
             echo "<td>{$item_date}</td>";
             echo "<td class='col-sm-2'>
                     <ul class='take-action'>

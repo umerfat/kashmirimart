@@ -13,18 +13,32 @@
                     </div>
                     <div class="col-sm-8 col-md-9 col-lg-9">
                         <div class="product-list product_detail p-lg-30 p-xs-15 bg-gray-fa bg1-gray-15 m-b-lg-50">
+                            <?php
+                            $item_id = htmlentities($_GET['item_details']);
+                            //$sub_cat_id = base64_decode($sub_cat_id);
+                            $item_id       = $item_id - 2323;
+                            $select_random = "SELECT * FROM tbl_item WHERE item_id = $item_id";
+                            $random_result = mysqli_query($connection, $select_random);
+                            $row_random    = mysqli_fetch_assoc($random_result);
+
+                            $item_id      = trim($row_random['item_id']);
+                            $item_name    = trim($row_random['item_name']);
+                            $item_price   = trim($row_random['item_price']);
+                            $item_image   = trim($row_random['item_image']);
+                            ?>
                             <div class="row">
-                                <!-- Image Large -->
+                                <!-- Image Large "http://placehold.it/320x320"-->
                                 <div class="image-zoom col-md-6 col-lg-6">
                                     <div class="product-img-lg p-lg-10 m-b-xs-30 text-center">
-                                        <a href="http://placehold.it/320x320">
-                                            <img src="http://placehold.it/320x320" alt="image">
+                                        <a href=<?php echo "admin/ITEM_IMAGES/".$item_image?> >
+
+                                            <img src=<?php echo "admin/ITEM_IMAGES/".$item_image?> alt="image">
                                         </a>
                                     </div>
                                 </div>
                                 <div class="col-md-6 col-lg-6">
                                     <!-- Product description -->
-                                    <h3 class="product-name">Cashew</h3>
+                                    <h3 class="product-name"><?php echo $item_name?></h3>
                                     <div class="product_para">
                                         <ul class="rating pull-left m-r-lg-20">
                                             <li class="active"><i class="fa fa-star"></i></li>
@@ -33,7 +47,7 @@
                                             <li><i class="fa fa-star"></i></li>
                                             <li><i class="fa fa-star"></i></li>
                                         </ul>
-                                        <p class="price p-t-lg-20 p-b-lg-10 f-30 f-bold color-red">Rs. 3500</p>
+                                        <p class="price p-t-lg-20 p-b-lg-10 f-30 f-bold color-red">Rs. <?php echo $item_price ?></p>
                                         <p>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus
                                             odio, vestibulum in vulputate</p>
                                         <hr/>

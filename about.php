@@ -9,7 +9,7 @@
                 <div>
                     <div class="row">
                         <div class="col-md-12">
-                            <img src="images/img_7.jpg" style="width: 1140px; height: 450px;" class="img-responsive">
+                            <img src="images/about_us.png" style="width: 1140px; height: 450px;" class="img-responsive">
                         </div>
                         <div class="col-md-8 col-lg-8 m-b-lg-50 col-md-offset-2 col-lg-offset-2">
                             <div class="heading">

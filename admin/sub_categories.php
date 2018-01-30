@@ -38,7 +38,7 @@
                                 <div class="col-md-3 col-sm-6 col-xs-12">
                                     <select class="form-control" name="category" required>
                                         <option value="">Choose Category</option>
-                                        <?php add_item_category();?>
+                                        <?php add_category();?>
                                     </select>
                                 </div>
                             </div>

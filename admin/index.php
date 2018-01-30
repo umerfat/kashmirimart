@@ -50,7 +50,7 @@
 
                     <div class="separator">
                         <div>
-                            <p>©2016 All Rights Reserved. DryfruitShop. Privacy and Terms</p>
+                            <p>©2018 All Rights Reserved. DryfruitShop. Privacy and Terms</p>
                         </div>
                     </div>
                 </form>

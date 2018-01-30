@@ -1,11 +1,15 @@
+<?php include "admin/database.php"; ?>
+<?php include "admin/functions.php";?>
 <!DOCTYPE html>
 <html lang="zxx">
-
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>DryFruits</title>
+    <meta name="description" content="KashmiriMart is your own Mart where in you can search for any item which is purely from kashmir. We mostly deal with Kashmiri dryfruits, all varieties of Kashmiri Saffron, Kashmiri Apples, Hand made kashmiri Shawls, Pure Kashmiri Honey and many more">
+    <meta name="keywords" content="KashmiriMart, Dryfruits, Saffron, Kashmir, Kashmiri Shawls, Kashmiri Apples">
+    <meta name="author" content="Umer Hurrah">
+    <title>KashmiriMart</title>
     <link rel="icon" href="">
     <!-- JqueryUI -->
     <link rel="stylesheet" type="text/css" href="css/jquery-ui.css">
@@ -35,8 +39,8 @@
                 <!-- Logo -->
                 <div class="col-md-3 col-lg-3">
                     <a href="" class="logo">
-                        <span>Dryfruits Mart</span>
-<!--                        <img src="images/logo.png" alt="logo">-->
+                        <span>KashmiriMart</span>
+                        <!-- <img src="images/kmart200.png" alt="logo"> -->
                     </a>
                 </div>
                 <div class="col-md-9 col-lg-9">
@@ -67,9 +71,9 @@
                             <!-- Search -->
                             <div class="search-box">
                                 <i class="fa fa-search"></i>
-                                <form>
-                                    <input type="text" name="search-txt" placeholder="Search..." class="search-txt form-item">
-                                    <button type="submit" name="submit" class="search-btn btn-1"><i class="fa fa-search"></i></button>
+                                <form method="POST" name="search_form" action="index.php#redirect">
+                                    <input type="text" name="search_item" placeholder="Search..." class="search-txt form-item">
+                                    <button type="submit" name="submit_search" class="search-btn btn-1"><i class="fa fa-search"></i></button>
                                 </form>
                             </div>
                         </div>
