@@ -25,9 +25,9 @@
                                 $page = $_GET['page'];
                             }
                             else{
-                                $page = "";
+                                $page = 0;
                             }
-                            if ($page == "" || $page == 1){
+                            if ($page == 0 || $page == 1){
                                 $page_1 = 0;//for index page
                             }
                             else{
@@ -76,11 +76,14 @@
                             </div>
                                 <nav aria-label="Page navigation" style="text-align: right">
                                 <ul class="pagination ht-pagination">
-                                    <?php echo "<li>
-                                        <a href='category.php?page=".($page--)."' aria-label='Previous'>
+                                    <?php 
+                                    if ($page > 0) {
+                                        echo "<li>
+                                        <a href='category.php?page=".($page-1)."' aria-label='Previous'>
                                             <span aria-hidden='true'><i class='fa fa-chevron-left'></i></span>
                                         </a>
                                     </li>";
+                                    }
                         for ($i = 1; $i <= $count; $i++){
                             if ($i == $page){
                                 echo "<li><a class='active' href='category.php?page={$i}'>{$i}</a> </li>";
@@ -90,11 +93,13 @@
                             }
                         }
                       
-                                    echo "<li>
-                                        <a href='category.php?page=".($page++)."' aria-label='Next'>
+                                    if ($page < $count) {
+                                        echo "<li>
+                                        <a href='category.php?page=".($page+1)."' aria-label='Next'>
                                             <span aria-hidden='true'><i class='fa fa-chevron-right'></i></span>
                                         </a>
                                     </li>";
+                                    }
                                       ?>
                                 </ul>
                             </nav>

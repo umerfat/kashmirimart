@@ -2,11 +2,12 @@
 <?php 
 if(isset($_POST['sendEmail']))
     {
+        echo "Umer hurrah";
     $recipient_email    = "Geeimran16@gmail.com"; //recepient
     $sender_subject     = htmlentities($_POST['sender_subject']); //email subject line
     $sender_name        = htmlentities($_POST['sender_name']);
 
-    $sender_email       = filter_var($_POST['sender_mail'], FILTER_SANITIZE_STRING); //recepient
+    $sender_email       = filter_var($_POST['sender_email'], FILTER_SANITIZE_STRING); //recepient
     $sender_message     = filter_var($_POST['sender_message'],FILTER_SANITIZE_STRING); //capture message
     $boundary = md5(uniqid(time()));
     $headers  = "MIME-Version: 1.0\r\n"; 
@@ -59,7 +60,7 @@ if(isset($_POST['sendEmail']))
                                 <h3>Contact Form</h3>
                             </div>
                             <div class="contact-form p-lg-30 p-xs-15 bg-gray-fa bg1-gray-2">
-                                <form>
+                                <form method="POST">
                                     <div class="form-group">
                                         <input type="text" class="form-control form-item" placeholder="Name" name="sender_name">
                                     </div>
@@ -69,7 +70,7 @@ if(isset($_POST['sendEmail']))
                                     <div class="form-group">
                                         <input type="text" class="form-control form-item" placeholder="Subject" name="sender_subject">
                                     </div>
-                                    <textarea class="form-control form-item h-200 m-b-lg-10" placeholder="Content" rows="3" name="sender_body"></textarea>
+                                    <textarea class="form-control form-item h-200 m-b-lg-10" placeholder="Content" rows="3" name="sender_message"></textarea>
                                     <button type="submit" class="ht-btn ht-btn-default" name="sendEmail">Submit</button>
                                 </form>
                             </div>

@@ -11,6 +11,7 @@
     <meta name="author" content="Umer Hurrah">
     <title>KashmiriMart</title>
     <link rel="icon" href="">
+     <link rel="shortcut icon" href="images/KashmiriMart.png" type="image/png">
     <!-- JqueryUI -->
     <link rel="stylesheet" type="text/css" href="css/jquery-ui.css">
     <!-- Bootstrap -->
@@ -38,7 +39,7 @@
             <div class="row">
                 <!-- Logo -->
                 <div class="col-md-3 col-lg-3">
-                    <a href="" class="logo">
+                    <a href="index.php" class="logo">
                         <span>KashmiriMart</span>
                         <!-- <img src="images/kmart200.png" alt="logo"> -->
                     </a>
