@@ -944,6 +944,7 @@ a.ht-btn-3x {
 .product-item .product-img img {
     /*width: 100%;*/
     width: 320px;
+    height: 320px;
 }
 
 .product-item .product-caption .product-name {
