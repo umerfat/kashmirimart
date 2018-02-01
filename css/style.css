@@ -2272,6 +2272,7 @@ p.price{
 .navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>.active>a:hover {
     color: #fff;
     background-color: rgba(219,151,82,1);
+    width: 100%;
 }
 
 .cat-text{
@@ -2279,7 +2280,8 @@ p.price{
 }
 
 .navbar-default .navbar-nav li ul li a {
-    margin-left: 10px;
+    /*margin-left: 10px;*/
+    width: 100%
 }
 
 .section-wrap {
