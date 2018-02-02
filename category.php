@@ -11,7 +11,7 @@
                         <?php include "includes/sidebar.php"; ?>
                     </div>
                    <?php
-                   if (htmlentities(    $_GET['sub_category']) > 1) {
+                   if (htmlentities($_GET['sub_category']) > 1) {
                        $_SESSION['sub_cat'] = htmlentities($_GET['sub_category']);
                    }
                    if(htmlentities($_GET['sub_category']) > 1  || isset($_GET['page'])){
