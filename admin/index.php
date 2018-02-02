@@ -27,7 +27,7 @@
     <a class="hiddenanchor" id="signin"></a>
 
     <div class="login_wrapper">
-    <?php 
+    <?php
     if (isset($_POST['user_login'])) {
         login_user();
     }
