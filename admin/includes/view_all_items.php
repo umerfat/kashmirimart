@@ -63,7 +63,7 @@ if (isset($_POST['checkBoxArray'])){
 
         <?php
 
-        $query  = "SELECT item_id, item_sub_cat_id, item_name, item_image, item_description, item_status,created_date FROM tbl_item";
+        $query  = "SELECT item_id, item_sub_cat_id, item_name, item_image, item_status,created_date FROM tbl_item";
         $select_items = mysqli_query($connection, $query);
         while ($row = mysqli_fetch_assoc($select_items)){
 

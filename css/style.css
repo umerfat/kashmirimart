@@ -1,3 +1,16 @@
+
+.searchalert {
+width: 960px;
+position: relative;
+margin:0 auto;
+line-height: 1.4em;
+}
+
+/* If in mobile screen with maximum width 479px. The iPhone screen resolution is 320x480 px (except iPhone4, 640x960) */    
+@media only screen and (max-width: 479px){
+    .searchalert{ width: 90%; }
+}
+
 @import url('https://fonts.googleapis.com/css?family=Roboto:100,200,300,400,500,700');
 
 /*--- 01. Reset ---*/

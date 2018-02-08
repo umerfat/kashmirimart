@@ -34,7 +34,7 @@
                                 <p class="white"><!-- Some other text --></p>
                                 <p class="white"><!-- Some other text --></p>
                             </div>
-                            <a href="#" class="btn btn-lg btn-white"><span>You Hire</span></a>
+                            <a href="#" class="btn btn-lg btn-white"><span><!-- You Hire --></span></a>
                         </div>
                     </li>
                     <li>

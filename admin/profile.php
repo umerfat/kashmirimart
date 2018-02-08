@@ -11,7 +11,7 @@
 if (isset($_SESSION['username'])){
 
     $username = $_SESSION['username'];
-    $query = "SELECT * FROM users WHERE username = '{$username}'";
+    $query = "SELECT * FROM tbl_user WHERE username = '{$username}'";
     $profile_query = mysqli_query($connection, $query);
     confirmQuery($profile_query);
     while ($row = mysqli_fetch_assoc($profile_query)){
@@ -23,7 +23,6 @@ if (isset($_SESSION['username'])){
         $user_lastname = $row['user_lastname'];
         $user_email = $row['user_email'];
         $user_image = $row['user_image'];
-        $user_role = $row['user_role'];
     }
 }
 
@@ -76,22 +75,6 @@ if (isset($_SESSION['username'])){
                                     }
                                     ?>
                                     <input type="file" id="user_image" name="user_image" class="form-control col-md-7 col-xs-12">
-                                </div>
-                            </div>
-
-                            <div class="item form-group">
-                                <div class="col-md-10 col-sm-12 col-xs-12 marginLeft">
-                                    <select class="form-control" name="role">
-                                        <option value="Subscriber"><?php echo $user_role; ?></option>
-                                        <?php
-                                        if ($user_role == 'Admin'){
-                                            echo "<option value='Subscriber'>Subscriber</option>";
-                                        }
-                                        else {
-                                            echo "<option value='Admin'>Admin</option>";
-                                        }
-                                        ?>
-                                    </select>
                                 </div>
                             </div>
 

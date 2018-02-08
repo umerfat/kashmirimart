@@ -54,18 +54,20 @@ function add_item(){
     global $connection;
     if (isset($_POST['add_item'])){
 
-        $item_name        = clean($_POST['name']);
-        $item_sub_cat_id  = clean($_POST['sub_category']);
-        $item_status      = clean($_POST['status']);
-        $item_image       = $_FILES['image']['name'];
-        $item_tmp_image   = $_FILES['image']['tmp_name'];
-        $item_description = clean($_POST['description']);
-        $item_description = str_replace("'", "''", $item_description);
+        $item_name           = clean($_POST['name']);
+        $item_sub_cat_id     = clean($_POST['sub_category']);
+        $item_status         = clean($_POST['status']);
+        $item_image          = $_FILES['image']['name'];
+        $item_tmp_image      = $_FILES['image']['tmp_name'];
+        $item_description_sh = clean($_POST['description_sh']);
+        $item_description_lg = clean($_POST['description_lg']);
+        $item_description_sh = str_replace("'", "''", $item_description_sh);
+        $item_description_lg = str_replace("'", "''", $item_description_lg);
 
         move_uploaded_file($item_tmp_image, "ITEM_IMAGES/$item_image");
 
-        $query  = "INSERT INTO tbl_item(item_sub_cat_id, item_name, item_image, item_description, item_status) ";
-        $query .= "VALUES({$item_sub_cat_id}, '{$item_name}', '{$item_image}', '{$item_description}', '{$item_status}')";
+        $query  = "INSERT INTO tbl_item(item_sub_cat_id, item_name, item_image, item_description_sh, item_description_lg, item_status) ";
+        $query .= "VALUES({$item_sub_cat_id}, '{$item_name}', '{$item_image}', '{$item_description_sh}', '{$item_description_lg}', '{$item_status}')";
 
         $insert_query = mysqli_query($connection, $query);
         if (!$insert_query){
@@ -373,22 +375,21 @@ function update_profile(){
         $user_password = $_POST['user_password'];
         //$user_password = password_hash($user_password, PASSWORD_BCRYPT);
 
-        move_uploaded_file($user_tmp_image, "../images/$user_image");
+        move_uploaded_file($user_tmp_image, "USER_IMAGES/$user_image");
 
         if (empty($user_image)) {
-            $query = "SELECT * FROM users WHERE username = '{$username}'";
+            $query = "SELECT * FROM tbl_user WHERE username = '{$username}'";
             $select_image = mysqli_query($connection, $query);
             while ($row = mysqli_fetch_array($select_image)) {
                 $user_image = $row['user_image'];
             }
         }
 
-        $query = "UPDATE users SET ";
+        $query = "UPDATE tbl_user SET ";
         $query .= "user_firstname = '{$user_firstname}', ";
         $query .= "user_lastname = '{$user_lastname}', ";
         $query .= "username = '{$username}', ";
         $query .= "user_image = '{$user_image}', ";
-        $query .= "user_role = '{$user_role}', ";
         $query .= "user_email = '{$user_email}', ";
         $query .= "user_password = '{$user_password}' ";
         $query .= "WHERE username = '{$username}'";

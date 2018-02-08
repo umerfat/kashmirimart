@@ -38,7 +38,12 @@ if (isset($_POST['add_item'])) {
     <div class="clearfix"></div>
     <div class="item form-group mt-10">
         <div class="col-md-6 col-sm-12 col-xs-12">
-            <textarea name="description" id="description" cols="30" rows="6" class="form-control col-md-7 col-xs-12" placeholder="Description"></textarea>
+            <textarea name="description_sh" id="description_sh" cols="30" rows="6" class="form-control col-md-7 col-xs-12" placeholder="Description"></textarea>
+        </div>
+    </div>
+    <div class="item form-group mt-10">
+        <div class="col-md-6 col-sm-12 col-xs-12">
+            <textarea name="description_lg" id="description_lg" cols="30" rows="6" class="form-control col-md-7 col-xs-12" placeholder="Description"></textarea>
         </div>
     </div>
     <div class="clearfix"></div>

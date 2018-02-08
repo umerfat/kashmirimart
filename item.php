@@ -21,10 +21,12 @@
                             $random_result = mysqli_query($connection, $select_random);
                             $row_random    = mysqli_fetch_assoc($random_result);
 
-                            $item_id      = trim($row_random['item_id']);
-                            $item_name    = trim($row_random['item_name']);
-                            $item_price   = trim($row_random['item_price']);
-                            $item_image   = trim($row_random['item_image']);
+                            $item_id              = trim($row_random['item_id']);
+                            $item_name            = trim($row_random['item_name']);
+                            $item_price           = trim($row_random['item_price']);
+                            $item_image           = trim($row_random['item_image']);
+                            $item_description_sh  = trim($row_random['item_description_sh']);
+                            $item_description_lg  = trim($row_random['item_description_lg']);
                             ?>
                             <div class="row">
                                 <!-- Image Large "http://placehold.it/320x320"-->
@@ -48,8 +50,7 @@
                                             <li><i class="fa fa-star"></i></li>
                                         </ul>
                                         <p class="price p-t-lg-20 p-b-lg-10 f-30 f-bold color-red">Rs. <?php echo $item_price ?></p>
-                                        <p>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus
-                                            odio, vestibulum in vulputate</p>
+                                        <p><?php echo $item_description_sh ?></p>
                                         <hr/>
                                         <p><b>Brand :</b>More Quality</p>
                                         <p><b>Manufactor :</b>Jammu </p>
@@ -63,23 +64,18 @@
                             <!-- Nav tabs -->
                             <ul class="nav nav-tabs ht-tabs text-left p-l-lg-30" role="tablist">
                                 <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">Description</a></li>
-                                <li role="presentation"><a href="#messages" aria-controls="messages" role="tab" data-toggle="tab">Review (6)</a></li>
+                                <li role="presentation"><a href="#messages" aria-controls="messages" role="tab" data-toggle="tab">Review</a></li>
                             </ul>
                             <!-- Tab panes -->
                             <div class="tab-content bg-gray-fa bg1-gray-15 p-lg-30 p-xs-15">
                                 <!-- Tab panes item -->
                                 <div role="tabpanel" class="tab-pane active" id="home">
                                     <div class="txt">
-                                        <p>Nunc facilisis sagittis ullamcorper. Proin lectus ipsum, gravida et mattis vulputate, tristique ut lectus. Sed
-                                            et lorem nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Aenean
-                                            eleifend laoreet congue. Vivamus adipiscing nisl ut dolor dignissim semper. Nulla luctus malesuada tincidunt.
-                                            Nunc facilisis sagittis ullamcorper. Proin lectus ipsum, gravida et mattis vulputate, tristique ut lectus. Sed
-                                            et lorem nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Aenean
-                                            eleifend laoreet congue. Vivamus adipiscing nisl ut dolor dignissim semper. Nulla luctus malesuada tincidunt.
+                                        <p><?php echo $item_description_lg; ?>
                                             </p>
                                     </div>
                                 </div>
-                                <div role="tabpanel" class="tab-pane" id="messages">Some Reviews about product.</div>
+                                <div role="tabpanel" class="tab-pane" id="messages">This feature will be available in next version of KashmiriMart.</div>
                             </div>
                         </div>
                         <!-- Product realted -->

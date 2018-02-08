@@ -1,4 +1,4 @@
-<?php include "includes/header.php"; ?>
+﻿<?php include "includes/header.php"; ?>
 <?php include "includes/slider.php"; ?>
 <!-- Main content -->
 <div id="wrap-body">
@@ -20,7 +20,7 @@
                      $search_result = mysqli_query($connection,$search_query) ;
                      if (mysqli_num_rows($search_result) < 1) {
 
-                         echo "<div class='alert alert-info' style='width:500px;height:44px;margin-left:400px'>
+                         echo "<div class='alert alert-info searchalert'>
                              <a href='#' class='close' data-dismiss='alert' aria-label='close'>×</a>
                          No match found for your search</div> ";
                      }

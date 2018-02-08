@@ -3,11 +3,11 @@
 <!--<div id="wrap-body">-->
 <!--    <div class="container">-->
 <!--        <div class="wrap-body-inner">-->
-<!--            <!-- Product grid -->-->
+<!--            <!-- Product grid -->
 <!--            <section class="m-t-lg-30 m-t-xs-0">-->
 <!--                <div class="row">-->
 <!--                    <div class="col-sm-4 col-md-3 col-lg-3">-->
-<!--                        <!-- Caterory -->-->
+<!--                        <!-- Caterory -->
 <!--                        --><?php //include "includes/sidebar.php"; ?>
 <!--                    </div>-->
 <!--                   --><?php

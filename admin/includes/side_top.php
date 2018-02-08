@@ -1,7 +1,7 @@
 <div class="col-md-3 left_col">
     <div class="left_col scroll-view">
         <div class="navbar nav_title" style="border: 0;">
-            <a href="index.php" class="site_title"><img src="USER_IMAGES/deafult_image.png" height="40px"></a>
+            <a href="index.php" class="site_title"><img src="USER_IMAGES/default_image.png" height="40px"></a>
         </div>
 
         <div class="clearfix"></div>
