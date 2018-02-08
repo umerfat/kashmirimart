@@ -38,7 +38,7 @@
         <div class="container">
             <div class="row">
                 <!-- Logo -->
-                <div class="col-md-3 col-lg-3">
+                <div class="col-md-1 col-lg-1">
                     <a href="index.php" class="logo">
                         <!-- <span>KashmiriMart</span> -->
                         <img src="images/logo.png" alt="logo">

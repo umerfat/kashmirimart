@@ -23,6 +23,7 @@
 
                             $item_id              = trim($row_random['item_id']);
                             $item_name            = trim($row_random['item_name']);
+                            $item_sub_cat_id      = trim($row_random['item_sub_cat_id']);
                             $item_price           = trim($row_random['item_price']);
                             $item_image           = trim($row_random['item_image']);
                             $item_description_sh  = trim($row_random['item_description_sh']);
@@ -84,63 +85,41 @@
                                 <h3>RELATED PRODUCTS</h3>
                             </div>
                             <div class="row">
-                                <div class="col-sm-6 col-md-4 col-lg-4">
-                                    <!-- Product item -->
-                                    <div class="product-item">
-                                        <a href="#" class="product-img"><img src="http://placehold.it/320x320" alt="image"></a>
-                                        <div class="product-caption">
-                                            <h4 class="product-name"><a href="#">Ground Nuts</a></h4>
-                                            <ul class="rating">
-                                                <li class="active"><i class="fa fa-star"></i></li>
-                                                <li class="active"><i class="fa fa-star"></i></li>
-                                                <li class="active"><i class="fa fa-star"></i></li>
-                                                <li><i class="fa fa-star"></i></li>
-                                                <li><i class="fa fa-star"></i></li>
-                                            </ul>
-                                            <div class="product-price-group">
-                                                <span class="product-price">Rs.250</span>
+                                 <?php
+                             $select_random = "SELECT * FROM tbl_item WHERE item_sub_cat_id = {$item_sub_cat_id} ORDER BY rand() LIMIT 3";
+
+                             // $select_random = "SELECT a.* FROM tbl_item a, (SELECT max(item_id)*rand() randid  FROM tbl_item) b  WHERE a.item_id >= b.randid limit 3";
+                             $random_result = mysqli_query($connection, $select_random);
+                                while($row_random = mysqli_fetch_assoc($random_result)) {
+
+                                    $item_id     = trim($row_random['item_id']) + 2323;
+                                    $item_name   = trim($row_random['item_name']);
+                                    $item_price  = trim($row_random['item_price']);
+                                    $item_image  = trim($row_random['item_image']); 
+                                    ?>
+                                    <div class="col-sm-6 col-md-4 col-lg-4">
+                                        <!-- Product item -->
+                                        <div class="product-item">
+                                            <a href="item.php?item_details=<?php echo $item_id?>" class="product-img"><img src=<?php echo "admin/ITEM_IMAGES/".$item_image ?> alt="image"></a>
+                                            <div class="product-caption">
+                                                <h4 class="product-name"><a href="item.php?item_details=<?php echo $item_id?>"> <?php echo $item_name ?></a></h4>
+                                                <ul class="rating">
+                                                    <li class="active"><i class="fa fa-star"></i></li>
+                                                    <li class="active"><i class="fa fa-star"></i></li>
+                                                    <li class="active"><i class="fa fa-star"></i></li>
+                                                    <li><i class="fa fa-star"></i></li>
+                                                    <li><i class="fa fa-star"></i></li>
+                                                </ul>
+                                                <div class="product-price-group">
+                                                    <span class="product-price">Rs. <?php echo $item_price?></span>
+                                                </div>
                                             </div>
                                         </div>
+                                
                                     </div>
-                                </div>
-                                <div class="col-sm-6 col-md-4 col-lg-4">
-                                    <!-- Product item -->
-                                    <div class="product-item">
-                                        <a href="#" class="product-img"><img src="http://placehold.it/320x320" alt="image"></a>
-                                        <div class="product-caption">
-                                            <h4 class="product-name"><a href="#">Ground Nuts</a></h4>
-                                            <ul class="rating">
-                                                <li class="active"><i class="fa fa-star"></i></li>
-                                                <li class="active"><i class="fa fa-star"></i></li>
-                                                <li class="active"><i class="fa fa-star"></i></li>
-                                                <li><i class="fa fa-star"></i></li>
-                                                <li><i class="fa fa-star"></i></li>
-                                            </ul>
-                                            <div class="product-price-group">
-                                                <span class="product-price">Rs.250</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-sm-6 col-md-4 col-lg-4">
-                                    <!-- Product item -->
-                                    <div class="product-item">
-                                        <a href="#" class="product-img"><img src="http://placehold.it/320x320" alt="image"></a>
-                                        <div class="product-caption">
-                                            <h4 class="product-name"><a href="#">Ground Nuts</a></h4>
-                                            <ul class="rating">
-                                                <li class="active"><i class="fa fa-star"></i></li>
-                                                <li class="active"><i class="fa fa-star"></i></li>
-                                                <li class="active"><i class="fa fa-star"></i></li>
-                                                <li><i class="fa fa-star"></i></li>
-                                                <li><i class="fa fa-star"></i></li>
-                                            </ul>
-                                            <div class="product-price-group">
-                                                <span class="product-price">Rs.250</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
+                                    <?php
+                                }
+                                ?>
                             </div>
                         </div>
                     </div>
