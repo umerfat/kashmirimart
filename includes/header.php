@@ -38,10 +38,10 @@
         <div class="container">
             <div class="row">
                 <!-- Logo -->
-                <div class="col-md-1 col-lg-1">
+                <div class="col-md-3 col-lg-3">
                     <a href="index.php" class="logo">
                         <!-- <span>KashmiriMart</span> -->
-                        <img src="images/logo.png" alt="logo">
+                        <img src="images/logo2.png" alt="logo">
                     </a>
                 </div>
                 <div class="col-md-9 col-lg-9">
