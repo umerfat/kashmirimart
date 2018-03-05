@@ -52,7 +52,7 @@
 //                                    $item_image   = trim($row_random['item_image']);
 //                            ?>
 <!--                                    <div class="col-sm-6 col-md-4 col-lg-4">-->
-<!--                                        <!-- Product item -->-->
+<!--                                        <!-- Product item -->
 <!--                                        <div class="product-item">-->
 <!--                                            <a href="item.php?item_details=--><?php //echo $item_id;?><!--" class="product-img"><img src=--><?php //echo "admin/ITEM_IMAGES/".$item_image ?><!-- alt="image"></a>-->
 <!--                                            <div class="product-caption">-->
