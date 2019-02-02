@@ -54,7 +54,7 @@ if (isset($_POST['checkBoxArray'])){
             <th>ID</th>
             <th>Name</th>
             <th>Image</th>
-            <th>Category</th>
+            <th>Sub Category</th>
             <th>Date</th>
             <th>Take Action</th>
         </tr>

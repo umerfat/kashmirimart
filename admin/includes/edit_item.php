@@ -10,6 +10,7 @@ if (isset($_GET['p_id'])){
 
         $item_id             = trim($row['item_id']);
         $item_name           = trim($row['item_name']);
+        $item_price          = trim($row['item_price']);
         $item_status         = trim($row['item_status']);
         $item_image          = trim($row['item_image']);
         $item_description_sh = mysqli_real_escape_string($connection, $row['item_description_sh']);
@@ -20,6 +21,7 @@ if (isset($_GET['p_id'])){
 if (isset($_POST['update_item'])){
 
     $item_name           = $_POST['name'];
+    $item_price          = $_POST['price'];
     $item_sub_cat_id     = $_POST['sub_category'];
     $item_status         = $_POST['status'];
     $item_image          = $_FILES['imagename']['name'];
@@ -42,6 +44,7 @@ if (isset($_POST['update_item'])){
     $query  = "UPDATE tbl_item SET ";
     $query .= "item_sub_cat_id ='{$item_sub_cat_id}', ";
     $query .= "item_name = '{$item_name}', ";
+    $query .= "item_price = '{$item_price}', ";
     $query .= "item_image = '{$item_image}', ";
     $query .= "item_description_sh = '{$item_description_sh}', ";
     $query .= "item_description_lg = '{$item_description_lg}', ";
@@ -76,11 +79,18 @@ if (isset($_POST['update_item'])){
                    name="name" type="text" value="<?php echo $item_name; ?>">
         </div>
     </div>
-
-    <div class="item form-group">
+     <div class="item form-group">
+        <label class="control-label col-md-1 col-sm-12 col-xs-12" for="price">Price </label>
+        <div class="col-md-10 col-sm-12 col-xs-12">
+            <input id="price" class="form-control col-md-7 col-xs-12"
+                   name="price" type="text" value="<?php echo $item_price; ?>" pattern="^\d+(\.\d+)?$">
+        </div>
+    </div>
+            <!-- Based on requirement we will add category or sub category dropdown in edit option -->
+    <!-- <div class="item form-group">
         <label class="control-label col-md-1 col-sm-12 col-xs-12" for="category">Category </label>
         <div class="col-md-10 col-sm-12 col-xs-12">
-           <!--  <select class="form-control" name="category">
+            <select class="form-control" name="category">
                 <?php
                 $query = "SELECT * FROM tbl_category";
                 $category_query = mysqli_query($connection, $query);
@@ -97,13 +107,13 @@ if (isset($_POST['update_item'])){
                     }
                 }
                 ?>
-            </select> -->
-            <select class="form-control" name="sub_category" required>
+            </select>
+             <select class="form-control" name="sub_category" required>
                 <option value="">Choose Category</option>
-                <?php add_item_category();?>
+                <?php //newt_checkbox_tree_add_item(checkboxtree, text, data, flags, index)_category();?>
             </select>
         </div>
-    </div>
+    </div> -->
 
     <div class="item form-group">
         <label class="control-label col-md-1 col-sm-12 col-xs-12" for="status">Status </label>

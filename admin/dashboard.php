@@ -49,7 +49,7 @@
                                 <div class="tile-stats">
                                     <div class="icon"><i class="fa fa-users"></i></div>
                                     <?php
-                                    $user_count = recordCount('users');
+                                    $user_count = recordCount('tbl_user');
                                     echo "<div class='count'>{$user_count}</div>";
                                     ?>
                                     <h3>Users</h3>

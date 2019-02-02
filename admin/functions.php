@@ -55,6 +55,7 @@ function add_item(){
     if (isset($_POST['add_item'])){
 
         $item_name           = clean($_POST['name']);
+        $item_price          = clean($_POST['price']);
         $item_sub_cat_id     = clean($_POST['sub_category']);
         $item_status         = clean($_POST['status']);
         $item_image          = $_FILES['image']['name'];
@@ -66,8 +67,8 @@ function add_item(){
 
         move_uploaded_file($item_tmp_image, "ITEM_IMAGES/$item_image");
 
-        $query  = "INSERT INTO tbl_item(item_sub_cat_id, item_name, item_image, item_description_sh, item_description_lg, item_status) ";
-        $query .= "VALUES({$item_sub_cat_id}, '{$item_name}', '{$item_image}', '{$item_description_sh}', '{$item_description_lg}', '{$item_status}')";
+        $query  = "INSERT INTO tbl_item(item_sub_cat_id, item_name, item_price, item_image, item_description_sh, item_description_lg, item_status) ";
+        $query .= "VALUES({$item_sub_cat_id}, '{$item_name}', '{$item_price }' , '{$item_image}', '{$item_description_sh}', '{$item_description_lg}', '{$item_status}')";
 
         $insert_query = mysqli_query($connection, $query);
         if (!$insert_query){
@@ -90,6 +91,9 @@ function add_item(){
 function add_category(){
     global $connection;
     $query = "SELECT * FROM tbl_category";
+    mysqli_query($connection, "SET @autoid := 0");
+    mysqli_query($connsection, "UPDATE tbl_category SET cat_id = @autoid := (@autoid+1)");
+    mysqli_query($connection, "alter table tbl_category AUTO_INCREMENT =1");
     $category_query = mysqli_query($connection, $query);
     if (!$category_query){
         die("Query failed " . mysqli_error($connection));
@@ -370,7 +374,7 @@ function update_profile(){
         $username = $_POST['username'];
         $user_image = $_FILES['user_image']['name'];
         $user_tmp_image = $_FILES['user_image']['tmp_name'];
-        $user_role = $_POST['role'];
+        //$user_role = $_POST['role'];
         $user_email = $_POST['user_email'];
         $user_password = $_POST['user_password'];
         //$user_password = password_hash($user_password, PASSWORD_BCRYPT);

@@ -12,6 +12,12 @@ if (isset($_POST['add_item'])) {
       </div>
     </div>
     <div class="item form-group">
+      <div class="col-md-6 col-sm-12 col-xs-12">
+          <input id="tPrice" class="form-control col-md-7 col-xs-12"
+                 name="price" placeholder="Price" type="text" pattern="^\d+(\.\d+)?$" required>
+      </div>
+    </div>
+    <div class="item form-group">
         <div class="col-md-6 col-sm-12 col-xs-12">
             <select class="form-control" name="status">
                 <option value="0">Select Status</option>

@@ -1,8 +1,8 @@
 <div class="col-md-3 left_col">
     <div class="left_col scroll-view">
-        <div class="navbar nav_title" style="border: 0;">
+      <!--   <div class="navbar nav_title" style="border: 0;">
             <a href="index.php" class="site_title"><img src="USER_IMAGES/default_image.png" height="40px"></a>
-        </div>
+        </div> -->
 
         <div class="clearfix"></div>
 
@@ -21,7 +21,7 @@
                         echo "<img src='USER_IMAGES/default_image.png' alt='' class='img-circle profile_img'>";
                     }
                     else{
-                        echo "<img src='USER_IMAGES/$user_image' alt='no img '  class='img-circle profile_img'>" . $_SESSION['username'];
+                        echo "<img src='USER_IMAGES/$user_image' alt='no img '  class='img-circle profile_img'>";
                     }
                 ?>
             </div>

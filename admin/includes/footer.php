@@ -1,7 +1,7 @@
 <!-- footer content -->
 <footer>
     <div class="pull-right">
-        <span>Powered By: </span><a href="http://dailylabour.futuretechs.co.in/">DailyLabour</a>
+        <span><b>Deleloped By:</b></span><a href="#">Umer Hurrah And Vinod Kumar</a>
     </div>
     <div class="clearfix"></div>
 </footer>
