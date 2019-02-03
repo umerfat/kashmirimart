@@ -145,6 +145,41 @@ function add_item_category(){
 
     }
 }
+function edit_item_category($item_sub_cat_id){
+
+    global $connection;
+    $query_cat = "SELECT cat_id, cat_name FROM tbl_category";
+    $cat_result = mysqli_query($connection, $query_cat);
+    if (!$cat_result){
+
+        die("Query failed " . mysqli_error($connection));
+    }
+    while ($row_cat = mysqli_fetch_assoc($cat_result)){
+
+        $cat_id   = trim($row_cat['cat_id']);
+        $cat_name = trim($row_cat['cat_name']);
+
+        $query_sub_cat = "SELECT sub_cat_id, sub_cat_name FROM  tbl_sub_category WHERE cat_id = '{$cat_id}'";
+        $sub_cat_result = mysqli_query($connection, $query_sub_cat);
+        if (mysqli_num_rows($sub_cat_result) > 0) {
+                    echo "<option style ='font-weight: bold;font-size:17px' value='{$cat_id}' disabled>{$cat_name}</option>";
+
+        }   
+        while ($row_cat_sub = mysqli_fetch_assoc($sub_cat_result)) {
+
+            $sub_cat_id   = trim($row_cat_sub['sub_cat_id']);
+            $sub_cat_name = trim($row_cat_sub['sub_cat_name']);
+            if ($sub_cat_id == $item_sub_cat_id) {
+                echo "<option selected value='{$sub_cat_id}'>{$sub_cat_name}</option>";
+            }
+            else {
+                echo "<option value='{$sub_cat_id}'>{$sub_cat_name}</option>";
+            }
+            
+        }
+
+    }
+}
 //Add User
 function add_user(){
 
