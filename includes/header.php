@@ -73,7 +73,7 @@
                             <!-- Search -->
                             <div class="search-box">
                                 <i class="fa fa-search"></i>
-                                <form method="POST" name="search_form" action="index.php#redirect">
+                                <form method="POST" name="search_form" action="search.php#redirect">
                                     <input type="text" name="search_item" placeholder="Search..." class="search-txt form-item">
                                     <button type="submit" name="submit_search" class="search-btn btn-1"><i class="fa fa-search"></i></button>
                                 </form>

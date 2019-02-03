@@ -43,13 +43,13 @@
                                     <!-- Product description -->
                                     <h3 class="product-name"><?php echo $item_name?></h3>
                                     <div class="product_para">
-                                        <ul class="rating pull-left m-r-lg-20">
-                                            <li class="active"><i class="fa fa-star"></i></li>
-                                            <li class="active"><i class="fa fa-star"></i></li>
-                                            <li class="active"><i class="fa fa-star"></i></li>
-                                            <li><i class="fa fa-star"></i></li>
-                                            <li><i class="fa fa-star"></i></li>
-                                        </ul>
+<!--                                        <ul class="rating pull-left m-r-lg-20">-->
+<!--                                            <li class="active"><i class="fa fa-star"></i></li>-->
+<!--                                            <li class="active"><i class="fa fa-star"></i></li>-->
+<!--                                            <li class="active"><i class="fa fa-star"></i></li>-->
+<!--                                            <li><i class="fa fa-star"></i></li>-->
+<!--                                            <li><i class="fa fa-star"></i></li>-->
+<!--                                        </ul>-->
                                         <p class="price p-t-lg-20 p-b-lg-10 f-30 f-bold color-red">Rs. <?php echo $item_price ?></p>
                                         <p><?php echo $item_description_sh ?></p>
                                         <hr/>

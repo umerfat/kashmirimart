@@ -36,8 +36,8 @@
                         <ul class="list-default">
                             <li><a href="contact.php">Contact</a></li>
                             <li><a href="about.php">About Us</a></li>
-                            <li><a href="#">Pivacy Policy</a></li>
-                            <li><a href="#">FAQ</a></li>
+                            <li><a href="privacy.php">Pivacy Policy</a></li>
+                            <li><a href="faq.php">FAQ</a></li>
                         </ul>
                     </div>
                 </div>

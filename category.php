@@ -17,7 +17,7 @@
                             ?>
                             <div class="col-sm-8 col-md-9 col-lg-9">
                                 <div class="text-left">
-                                    <h4>Category</h4>
+                                    <h4>Category >> Sub-Category</h4>
                                 </div>
                                 <div class="product product-grid">
                                     <div class="row">
@@ -60,13 +60,13 @@
                                                     <a href="item.php?item_details=<?php echo $item_id;?>" class="product-img"><img src=<?php echo "admin/ITEM_IMAGES/".$item_image ?> alt="image"></a>
                                                     <div class="product-caption">
                                                         <h4 class="product-name"><a href="item.php?item_details=<?php echo $item_id;?>"> <?php echo $item_name." ".$count_1  ?></a></h4>
-                                                        <ul class="rating">
-                                                            <li class="active"><i class="fa fa-star"></i></li>
-                                                            <li class="active"><i class="fa fa-star"></i></li>
-                                                            <li class="active"><i class="fa fa-star"></i></li>
-                                                            <li><i class="fa fa-star"></i></li>
-                                                            <li><i class="fa fa-star"></i></li>
-                                                        </ul>
+<!--                                                        <ul class="rating">-->
+<!--                                                            <li class="active"><i class="fa fa-star"></i></li>-->
+<!--                                                            <li class="active"><i class="fa fa-star"></i></li>-->
+<!--                                                            <li class="active"><i class="fa fa-star"></i></li>-->
+<!--                                                            <li><i class="fa fa-star"></i></li>-->
+<!--                                                            <li><i class="fa fa-star"></i></li>-->
+<!--                                                        </ul>-->
                                                         <div class="product-price-group">
                                                             <span class="product-price">Rs. <?php echo $item_price?></span>
                                                         </div>
