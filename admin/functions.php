@@ -163,10 +163,9 @@ function edit_item_category($item_sub_cat_id){
         $sub_cat_result = mysqli_query($connection, $query_sub_cat);
         if (mysqli_num_rows($sub_cat_result) > 0) {
                     echo "<option style ='font-weight: bold;font-size:17px' value='{$cat_id}' disabled>{$cat_name}</option>";
-
         }   
         while ($row_cat_sub = mysqli_fetch_assoc($sub_cat_result)) {
-
+            
             $sub_cat_id   = trim($row_cat_sub['sub_cat_id']);
             $sub_cat_name = trim($row_cat_sub['sub_cat_name']);
             if ($sub_cat_id == $item_sub_cat_id) {

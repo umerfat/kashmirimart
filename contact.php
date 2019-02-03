@@ -82,9 +82,9 @@ if(isset($_POST['sendEmail']))
                             </div>
                             <div class="contact-info p-lg-30 p-xs-15 bg-gray-fa bg1-gray-2">
                                 <div class="content">
-                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod temp incidunt ut labore et dolore magna
-                                        aliqua uat enim ad minim veniama quis nostrud ullamco lab oris nisi ut aliqu.</p>
+                                    <p>Email us with any questions or inquires or call us. We would be happy to answer your questions and serve you in a better way.</p>
                                     <ul class="list-default">
+                                        <li><span>CEO & Managing Director: </span>Mr Imraan</li>
                                         <li><span>Address: </span>Jammu Kashmir, Jammu</li>
                                         <li><span>Mobile: </span>+91 9874561232</li>
                                         <li><span>Email: </span></span>Geeimran16@gmail.com</li>

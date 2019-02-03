@@ -50,7 +50,7 @@
             <div class="bg-gray-0c p-l-r">
                 <div class="row">
                     <div class="col-md-6">
-                        <p>© 2019 Designed by <a href="" style="color: white">Umer HUrrah </a><a href="" style="color: white">Vinod Kumar</a>. All rights reserved</p>
+                        <p>© 2019 Designed by  <a href="" style="color: white"> Umer HUrrah </a><a href="" style="color: white">Vinod Kumar</a>. All rights reserved</p>
                     </div>
                     <div class="col-md-6">
                         <ul class="social-icon list-inline pull-right">
