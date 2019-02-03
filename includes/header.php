@@ -12,6 +12,7 @@
     <title>KashmiriMart</title>
     <link rel="icon" href="">
      <link rel="shortcut icon" href="images/KashmiriMart.png" type="image/png">
+    <link href="https://fonts.googleapis.com/css?family=Nunito:400,700,800,900" rel="stylesheet">
     <!-- JqueryUI -->
     <link rel="stylesheet" type="text/css" href="css/jquery-ui.css">
     <!-- Bootstrap -->

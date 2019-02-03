@@ -23,7 +23,7 @@
 
                             $item_id              = trim($row_random['item_id']);
                             $item_name            = trim($row_random['item_name']);
-                            $item_sub_cat_id      = trim($row_random['item_sub_cat_id']);
+                            $sub_cat_id           = trim($row_random['sub_cat_id']);
                             $item_price           = trim($row_random['item_price']);
                             $item_image           = trim($row_random['item_image']);
                             $item_description_sh  = trim($row_random['item_description_sh']);
@@ -86,7 +86,7 @@
                             </div>
                             <div class="row">
                                  <?php
-                             $select_random = "SELECT * FROM tbl_item WHERE item_sub_cat_id = {$item_sub_cat_id} AND item_id != {$item_id} ORDER BY rand() LIMIT 3";
+                             $select_random = "SELECT * FROM tbl_item WHERE sub_cat_id = {$sub_cat_id} AND item_id != {$item_id} ORDER BY rand() LIMIT 3";
 
                              // $select_random = "SELECT a.* FROM tbl_item a, (SELECT max(item_id)*rand() randid  FROM tbl_item) b  WHERE a.item_id >= b.randid limit 3";
                              $random_result = mysqli_query($connection, $select_random);

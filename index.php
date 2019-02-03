@@ -20,9 +20,13 @@
                      $search_result = mysqli_query($connection,$search_query) ;
                      if (mysqli_num_rows($search_result) < 1) {
 
-                         echo "<div class='alert alert-info searchalert'>
-                             <a href='#' class='close' data-dismiss='alert' aria-label='close'>×</a>
-                         No match found for your search</div> ";
+                         echo "
+                            <div class='col-sm-8 col-md-9 col-lg-9'>
+                                <div class='alert alert-info searchalert'>
+                                    <a href='#' class='close' data-dismiss='alert' aria-label='close'>×</a>
+                                    No match found for your search
+                                </div>
+                            </div>";
                      }
                      else{
                        $labour_table = array();
@@ -31,6 +35,9 @@
                        }
                        ?>
                         <div class="col-sm-8 col-md-9 col-lg-9">
+                            <div class="product-home-header">
+                                <h4>Search Results</h4>
+                            </div>
                         <div class="product product-grid">
                             <div class="row">
                                <?php
@@ -72,25 +79,25 @@
                   }
                                 ?>
                             </div>
-                            <nav aria-label="Page navigation" style="text-align: right">
-                                <ul class="pagination ht-pagination">
-                                    <li>
-                                        <a href="#" aria-label="Previous">
-                                            <span aria-hidden="true"><i class="fa fa-chevron-left"></i></span>
-                                        </a>
-                                    </li>
-                                    <li class="active"><a href="#">1</a></li>
-                                    <li><a href="#">2</a></li>
-                                    <li><a href="#">3</a></li>
-                                    <li><a href="#">4</a></li>
-                                    <li><a href="#">5</a></li>
-                                    <li>
-                                        <a href="#" aria-label="Next">
-                                            <span aria-hidden="true"><i class="fa fa-chevron-right"></i></span>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </nav>
+<!--                            <nav aria-label="Page navigation" style="text-align: right">-->
+<!--                                <ul class="pagination ht-pagination">-->
+<!--                                    <li>-->
+<!--                                        <a href="#" aria-label="Previous">-->
+<!--                                            <span aria-hidden="true"><i class="fa fa-chevron-left"></i></span>-->
+<!--                                        </a>-->
+<!--                                    </li>-->
+<!--                                    <li class="active"><a href="#">1</a></li>-->
+<!--                                    <li><a href="#">2</a></li>-->
+<!--                                    <li><a href="#">3</a></li>-->
+<!--                                    <li><a href="#">4</a></li>-->
+<!--                                    <li><a href="#">5</a></li>-->
+<!--                                    <li>-->
+<!--                                        <a href="#" aria-label="Next">-->
+<!--                                            <span aria-hidden="true"><i class="fa fa-chevron-right"></i></span>-->
+<!--                                        </a>-->
+<!--                                    </li>-->
+<!--                                </ul>-->
+<!--                            </nav>-->
                         </div>
                     </div>
                        <?php //umer hurrah
@@ -100,6 +107,9 @@
                      if (empty($_GET['sub_category']) && !isset($_GET['page'])) {
                     ?>
                      <div class="col-sm-8 col-md-9 col-lg-9">
+                         <div class="product-home-header">
+                             <h4>Dummy Header</h4>
+                         </div>
                         <div class="product product-grid">
                             <div class="row">
                                <?php

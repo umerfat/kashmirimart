@@ -1,5 +1,4 @@
 <?php include "includes/header.php"; ?>
-<?php include "includes/slider.php"; ?>
     <div id="wrap-body">
         <div class="container">
             <div class="wrap-body-inner">
@@ -17,6 +16,9 @@
                         if(htmlentities($_GET['sub_category']) > 1  || isset($_GET['page'])){
                             ?>
                             <div class="col-sm-8 col-md-9 col-lg-9">
+                                <div class="text-left">
+                                    <h4>Category</h4>
+                                </div>
                                 <div class="product product-grid">
                                     <div class="row">
                                         <?php
@@ -26,6 +28,7 @@
                             }
                             else{
                                 $page = 0;
+
                             }
                             if ($page == 0 || $page == 1){
                                 $page_1 = 0;//for index page
@@ -35,13 +38,13 @@
                             }
                             $sub_cat_id = $_SESSION['sub_cat'];
                             $sub_cat_id = ($sub_cat_id - 1375);
-                            $count_query  = "SELECT * FROM tbl_item WHERE item_sub_cat_id = $sub_cat_id";
+                            $count_query  = "SELECT * FROM tbl_item WHERE sub_cat_id = $sub_cat_id";
                             $count_result = mysqli_query($connection,$count_query);
                             $count_1      = mysqli_num_rows($count_result);
                             $count        = ceil($count_1/$per_page);
                              //$sub_cat_id = base64_decode($sub_cat_id);
                              
-                             $select_random = "SELECT * FROM tbl_item WHERE item_sub_cat_id = $sub_cat_id LIMIT $page_1,$per_page";
+                             $select_random = "SELECT * FROM tbl_item WHERE sub_cat_id = $sub_cat_id LIMIT $page_1,$per_page";
                              // $select_random = "SELECT a.* FROM tbl_item a, (SELECT max(item_id)*rand() randid  FROM tbl_item) b  WHERE a.item_id >= b.randid limit 3";
                              $random_result = mysqli_query($connection, $select_random);
                                 while($row_random = mysqli_fetch_assoc($random_result)) {
