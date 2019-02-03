@@ -22,7 +22,7 @@ if (isset($_POST['update_item'])){
 
     $item_name           = $_POST['name'];
     $item_price          = $_POST['price'];
-    $item_sub_cat_id     = $_POST['sub_category'];
+    $sub_cat_id          = $_POST['sub_category'];
     $item_status         = $_POST['status'];
     $item_image          = $_FILES['imagename']['name'];
     $item_tmp_image      = $_FILES['imagename']['tmp_name'];
@@ -42,7 +42,7 @@ if (isset($_POST['update_item'])){
     }
 
     $query  = "UPDATE tbl_item SET ";
-    $query .= "item_sub_cat_id ='{$item_sub_cat_id}', ";
+    $query .= "sub_cat_id ='{$sub_cat_id}', ";
     $query .= "item_name = '{$item_name}', ";
     $query .= "item_price = '{$item_price}', ";
     $query .= "item_image = '{$item_image}', ";

@@ -1,5 +1,16 @@
 <?php
 
+// CREATE TABLE `categories` (
+//  `id` int(11) NOT NULL AUTO_INCREMENT,
+//  `parent_id` int(11) NOT NULL DEFAULT '0',
+//  `name` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
+//  `created` datetime NOT NULL,
+//  `modified` datetime NOT NULL,
+//  `status` enum('1','0') COLLATE utf8_unicode_ci NOT NULL DEFAULT '1' COMMENT '1:Active, 0:Inactive',
+//  PRIMARY KEY (`id`)
+// ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+
 function confirmQuery($result){
 
     global $connection;
@@ -56,7 +67,7 @@ function add_item(){
 
         $item_name           = clean($_POST['name']);
         $item_price          = clean($_POST['price']);
-        $item_sub_cat_id     = clean($_POST['sub_category']);
+        $sub_cat_id          = clean($_POST['sub_category']);
         $item_status         = clean($_POST['status']);
         $item_image          = $_FILES['image']['name'];
         $item_tmp_image      = $_FILES['image']['tmp_name'];
@@ -67,8 +78,8 @@ function add_item(){
 
         move_uploaded_file($item_tmp_image, "ITEM_IMAGES/$item_image");
 
-        $query  = "INSERT INTO tbl_item(item_sub_cat_id, item_name, item_price, item_image, item_description_sh, item_description_lg, item_status) ";
-        $query .= "VALUES({$item_sub_cat_id}, '{$item_name}', '{$item_price }' , '{$item_image}', '{$item_description_sh}', '{$item_description_lg}', '{$item_status}')";
+        $query  = "INSERT INTO tbl_item(sub_cat_id, item_name, item_price, item_image, item_description_sh, item_description_lg, item_status) ";
+        $query .= "VALUES({$sub_cat_id}, '{$item_name}', '{$item_price }' , '{$item_image}', '{$item_description_sh}', '{$item_description_lg}', '{$item_status}')";
 
         $insert_query = mysqli_query($connection, $query);
         if (!$insert_query){
