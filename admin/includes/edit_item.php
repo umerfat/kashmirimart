@@ -9,6 +9,7 @@ if (isset($_GET['p_id'])){
     while ($row = mysqli_fetch_assoc($select_items_by_id)) {
 
         $item_id             = trim($row['item_id']);
+        $sub_cat_id          = trim($row['sub_cat_id']);
         $item_name           = trim($row['item_name']);
         $item_price          = trim($row['item_price']);
         $item_status         = trim($row['item_status']);
@@ -60,7 +61,7 @@ if (isset($_POST['update_item'])){
         echo "
             <div class='col-md-12 col-xs-12'>
               <div class='alert alert-success alert-dismissable fade in'>
-                <a href='#' class='close' data-dismiss='alert' aria-label='close'>&times;                 </a>
+                <a href='#' class='close' data-dismiss='alert' aria-label='close'>&times;</a>
                 <strong>{$item_name} has updated!</strong>
               </div>
             </div>
@@ -87,10 +88,10 @@ if (isset($_POST['update_item'])){
         </div>
     </div>
             <!-- Based on requirement we will add category or sub category dropdown in edit option -->
-    <!-- <div class="item form-group">
+    <div class="item form-group">
         <label class="control-label col-md-1 col-sm-12 col-xs-12" for="category">Category </label>
         <div class="col-md-10 col-sm-12 col-xs-12">
-            <select class="form-control" name="category">
+           <!--  <select class="form-control" name="category">
                 <?php
                 $query = "SELECT * FROM tbl_category";
                 $category_query = mysqli_query($connection, $query);
@@ -107,13 +108,13 @@ if (isset($_POST['update_item'])){
                     }
                 }
                 ?>
-            </select>
+            </select> -->
              <select class="form-control" name="sub_category" required>
                 <option value="">Choose Category</option>
-                <?php //newt_checkbox_tree_add_item(checkboxtree, text, data, flags, index)_category();?>
+                <?php edit_item_category($sub_cat_id);?>
             </select>
         </div>
-    </div> -->
+    </div>
 
     <div class="item form-group">
         <label class="control-label col-md-1 col-sm-12 col-xs-12" for="status">Status </label>
