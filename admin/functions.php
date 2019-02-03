@@ -441,7 +441,7 @@ function get_category(){
         //print_r($catArray);
         $cat_id   = trim($cat['cat_id']);
         $cat_name = trim($cat['cat_name']);
-    echo "<li class='active'>";
+    echo "<li>";
     ++$i;
        echo " <a href='javascript:void(0)' data-toggle='collapse' data-target='#toggleDemo-$i' data-parent='#sidenav01' class='collapsed'>$cat_name<span class='caret pull-right'></span>
         </a>";

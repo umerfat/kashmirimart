@@ -249,8 +249,7 @@ h6 a {
 .navbar-default .navbar-nav li a {
     padding: 25px 25px;
     text-transform: uppercase;
-    font-weight: bold;
-    font-size: 15px;
+    font-size: 14px;
 }
 
 .navbar-default .navbar-brand:focus,
@@ -2203,6 +2202,7 @@ p.price{
         border-radius:0;
         margin-bottom:0;
         border:0;
+        background-color: #fff;
     }
     .sidebar-nav .navbar ul {
         float: none;
@@ -2211,6 +2211,8 @@ p.price{
     .sidebar-nav .navbar li {
         float: none;
         display: block;
+        background: #eee;
+        margin-bottom: 5px;
     }
     .sidebar-nav .navbar li a {
         padding-top: 12px;
@@ -2289,12 +2291,29 @@ p.price{
 }
 
 .cat-text{
-    margin-left: 20px;
+    background-color: #fff;
+    padding-left: 20px;
+    font-size: 18px;
+    text-transform: capitalize;
 }
 
-.navbar-default .navbar-nav li ul li a {
+.navbar-default .navbar-nav li ul li {
     /*margin-left: 10px;*/
-    width: 100%
+    width: 100%;
+    margin-bottom: 0;
+    background-color: #fff;
+    border-bottom: 0 !important;
+    padding-left: 16px;
+}
+
+.navbar-default .navbar-nav li ul li a:hover{
+    background-color: #fff;
+    color: #212121;
+}
+
+.navbar-default .navbar-nav li ul li a{
+    color: #eee;
+    text-transform: capitalize;
 }
 
 .section-wrap {
@@ -2433,7 +2452,30 @@ p.price{
     background: transparent;
 }
 
-@media (max-width: 767px)
-.navbar-toggle {
-    background: none;
+@media (max-width: 767px){
+    .navbar-toggle {
+        background: none;
+    }
+}
+
+@media (max-width: 530px) {
+    .navbar.navbar-default{
+        margin-top: 10px;
+    }
+    .navbar-toggle{
+        margin-bottom: 0;
+    }
+    .cat-text{
+        display: none;
+    }
+    .navbar-default .navbar-nav li{
+        border-bottom: 1px solid #eee;
+    }
+    .navbar-default .navbar-nav li a{
+        font-size: 16px;
+        border-bottom: 0;
+    }
+    #sidenav01 .caret{
+        display: none;
+    }
 }

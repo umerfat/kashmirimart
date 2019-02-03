@@ -17,7 +17,7 @@
     <!-- Bootstrap -->
     <link rel="stylesheet" type="text/css" href="css/boostrap/bootstrap.min.css">
     <!-- Awesome font icons -->
-    <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">">
     <!--magnific popup-->
     <link rel="stylesheet" type="text/css" href="css/magnific-popup/magnific-popup.css" media="screen" />
     <link rel="stylesheet" type="text/css" href="css/sliders.css">

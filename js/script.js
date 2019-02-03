@@ -89,4 +89,9 @@ function initFlexSlider() {
         prevText: ["<i class='fa fa-angle-left'></i>"],
         nextText: ["<i class='fa fa-angle-right'></i>"]
     });
+
+    $('#sidenav01 li').click(function () {
+        $("#sidenav01 li").removeClass("active");
+        $(this).addClass("active");
+    })
 }
