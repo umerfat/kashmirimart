@@ -13,12 +13,13 @@
     <title>KashmiriMart</title>
     <link rel="icon" href="">
      <link rel="shortcut icon" href="images/KashmiriMart.png" type="image/png">
+    <link href="https://fonts.googleapis.com/css?family=Nunito:400,700,800,900" rel="stylesheet">
     <!-- JqueryUI -->
     <link rel="stylesheet" type="text/css" href="css/jquery-ui.css">
     <!-- Bootstrap -->
     <link rel="stylesheet" type="text/css" href="css/boostrap/bootstrap.min.css">
     <!-- Awesome font icons -->
-    <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">">
     <!--magnific popup-->
     <link rel="stylesheet" type="text/css" href="css/magnific-popup/magnific-popup.css" media="screen" />
     <link rel="stylesheet" type="text/css" href="css/sliders.css">
@@ -73,7 +74,7 @@
                             <!-- Search -->
                             <div class="search-box">
                                 <i class="fa fa-search"></i>
-                                <form method="POST" name="search_form" action="index.php#redirect">
+                                <form method="POST" name="search_form" action="search.php#redirect">
                                     <input type="text" name="search_item" placeholder="Search..." class="search-txt form-item">
                                     <button type="submit" name="submit_search" class="search-btn btn-1"><i class="fa fa-search"></i></button>
                                 </form>

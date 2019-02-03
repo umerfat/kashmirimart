@@ -45,7 +45,6 @@ if(isset($_POST['sendEmail']))
     }
   }
 ?>
-?>
 <!-- Main content -->
 <div id="wrap-body" class="p-t-lg-30">
     <div class="container">
