@@ -87,7 +87,7 @@ if (isset($_POST['update_item'])){
         </div>
     </div>
             <!-- Based on requirement we will add category or sub category dropdown in edit option -->
-    <!-- <div class="item form-group">
+    <div class="item form-group">
         <label class="control-label col-md-1 col-sm-12 col-xs-12" for="category">Category </label>
         <div class="col-md-10 col-sm-12 col-xs-12">
             <select class="form-control" name="category">
@@ -110,10 +110,10 @@ if (isset($_POST['update_item'])){
             </select>
              <select class="form-control" name="sub_category" required>
                 <option value="">Choose Category</option>
-                <?php //newt_checkbox_tree_add_item(checkboxtree, text, data, flags, index)_category();?>
+                <?php add_item_category();?>
             </select>
         </div>
-    </div> -->
+    </div>
 
     <div class="item form-group">
         <label class="control-label col-md-1 col-sm-12 col-xs-12" for="status">Status </label>
