@@ -4,11 +4,11 @@ include "database.php";
 include "functions.php";
 ?>
 
-<?php
+<!-- <?php
 // if (!isset($_SESSION['username'])){
 //     header("Location:index.php");
 // }
-?>
+?> -->
 
 <!DOCTYPE html>
 <html lang="en">
@@ -18,8 +18,8 @@ include "functions.php";
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="shortcut icon" href="../images/favicon.ico" type="image/x-icon">
-    <title>DryfruitShop | Admin</title>
+    <link rel="shortcut icon" href="../images/logo.png" type="image/x-icon">
+    <title>KashmiriMart | Admin</title>
     <!-- Bootstrap -->
     <link href="vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Font Awesome -->

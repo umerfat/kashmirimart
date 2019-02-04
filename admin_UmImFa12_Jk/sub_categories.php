@@ -20,8 +20,12 @@
                 <div class="x_panel">
                     <div class="x_content">
 
-                        <!--Calling php function for inserting categories-->
-                        <?php insert_sub_category(); ?>
+                        <!--Calling php function for inserting sub categories-->
+                         <?php
+                        if (isset($_POST['add_item'])) {
+                            insert_sub_category();
+                            }
+                        ?>
 
                         <form class="form-horizontal form-label-left" method="post"
                               id="add-sub-category-form">

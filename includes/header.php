@@ -1,5 +1,4 @@
 <?php include "admin_UmImFa12_Jk/database.php"; ?>
-
 <?php include "admin_UmImFa12_Jk/functions.php";?>
 <!DOCTYPE html>
 <html lang="zxx">
@@ -12,14 +11,14 @@
     <meta name="author" content="Umer Hurrah">
     <title>KashmiriMart</title>
     <link rel="icon" href="">
-     <link rel="shortcut icon" href="images/KashmiriMart.png" type="image/png">
+     <link rel="shortcut icon" href="images/logo.png" type="image/png">
     <link href="https://fonts.googleapis.com/css?family=Nunito:400,700,800,900" rel="stylesheet">
     <!-- JqueryUI -->
     <link rel="stylesheet" type="text/css" href="css/jquery-ui.css">
     <!-- Bootstrap -->
     <link rel="stylesheet" type="text/css" href="css/boostrap/bootstrap.min.css">
     <!-- Awesome font icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <!--magnific popup-->
     <link rel="stylesheet" type="text/css" href="css/magnific-popup/magnific-popup.css" media="screen" />
     <link rel="stylesheet" type="text/css" href="css/sliders.css">
@@ -31,7 +30,6 @@
     <link id="vers" rel="stylesheet" type="text/css" href="css/light-version.css">
     <!-- Boxed-->
 </head>
-
 <body>
 <div id="wrap" class="color1-inher">
 <!-- Header -->

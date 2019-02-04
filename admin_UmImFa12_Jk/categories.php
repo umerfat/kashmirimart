@@ -21,7 +21,11 @@
                     <div class="x_content">
 
                         <!--Calling php function for inserting categories-->
-                        <?php insert_category(); ?>
+                        <?php
+                        if (isset($_POST['add_item'])) {
+                            insert_category();
+                            }
+                        ?>
 
                         <form class="form-horizontal form-label-left" method="post"
                               id="add-category-form">
