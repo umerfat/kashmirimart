@@ -2473,6 +2473,10 @@ p.price{
 
 .product-item a{
     display: block;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    padding: 0 10px;
 }
 
 .product-item:hover{
