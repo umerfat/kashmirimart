@@ -16,7 +16,7 @@
                     ?>
                      <div class="col-sm-8 col-md-9 col-lg-9">
                          <div class="product-home-header">
-                             <h4>Dummy Header</h4>
+                             <h4>Our Products</h4>
                          </div>
                         <div class="product product-grid">
                             <div class="row">
