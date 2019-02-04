@@ -1,7 +1,7 @@
 <!-- footer content -->
 <footer>
     <div class="pull-right">
-        <span><b>Deleloped By:</b></span><a href="#">Umer Hurrah And Vinod Kumar</a>
+        <span><b>Developed By:</b></span><a href="#">Umer Hurrah And Vinod Kumar</a>
     </div>
     <div class="clearfix"></div>
 </footer>
