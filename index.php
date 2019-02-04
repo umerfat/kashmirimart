@@ -35,7 +35,7 @@
                                     <div class="col-sm-6 col-md-4 col-lg-4">
                                         <!-- Product item -->
                                         <div class="product-item">
-                                            <a href="item.php?item_details=<?php echo $item_id?>" class="product-img"><img src=<?php echo "admin/ITEM_IMAGES/".$item_image ?> alt="image"></a>
+                                            <a href="item.php?item_details=<?php echo $item_id?>" class="product-img"><img src=<?php echo "admin_UmImFa12_Jk/ITEM_IMAGES/".$item_image ?> alt="image"></a>
                                             <div class="product-caption">
                                                 <h4 class="product-name"><a href="item.php?item_details=<?php echo $item_id?>"> <?php echo $item_name ?></a></h4>
 <!--                                                <ul class="rating">-->

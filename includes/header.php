@@ -1,6 +1,6 @@
-<?php include "admin/database.php"; ?>
+<?php include "admin_UmImFa12_Jk/database.php"; ?>
 
-<?php include "admin/functions.php";?>
+<?php include "admin_UmImFa12_Jk/functions.php";?>
 <!DOCTYPE html>
 <html lang="zxx">
 <head>
