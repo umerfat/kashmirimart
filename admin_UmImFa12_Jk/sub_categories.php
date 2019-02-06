@@ -30,7 +30,7 @@ ini_set('display_errors', 'On');
                             insert_sub_category();
                             }
                         ?>
-
+<!-- I think error of not being able to add cat and sub_cat is due to this id="add-sub-category-form" because if u remove this we are able to add data -->
                         <form class="form-horizontal form-label-left" method="post"
                               id="add-sub-category-form" enctype="multipart/form-data" action="">
                             <div class="item form-group">
