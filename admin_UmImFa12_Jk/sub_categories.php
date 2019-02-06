@@ -1,3 +1,7 @@
+<?php
+error_reporting(E_ALL);
+ini_set('display_errors', 'On');
+?>
 <?php include "includes/header.php"; ?>
 
 <?php include "includes/side_top.php"; ?>
@@ -11,7 +15,7 @@
     <div class="">
         <div class="page-title">
             <div class="title_left">
-                <h3>Category</h3>
+                <h3>Sub Category</h3>
             </div>
         </div>
         <div class="clearfix"></div>
@@ -22,13 +26,13 @@
 
                         <!--Calling php function for inserting sub categories-->
                          <?php
-                        if (isset($_POST['add_item'])) {
+                        if (isset($_POST['submit_sub_category'])) {
                             insert_sub_category();
                             }
                         ?>
 
                         <form class="form-horizontal form-label-left" method="post"
-                              id="add-sub-category-form">
+                              id="add-sub-category-form" enctype="multipart/form-data" action="">
                             <div class="item form-group">
                                 <label class="control-label col-md-3 col-sm-3 col-xs-12"
                                        for="category">Add Sub Category <span

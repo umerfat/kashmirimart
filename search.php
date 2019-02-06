@@ -27,7 +27,7 @@
                                           <li>Checking your spelling</li>
                                         </ul>
                                     </div>
-                                </div>
+                                </div>  
                             </div>
                             ";
                     }

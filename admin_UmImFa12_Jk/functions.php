@@ -309,7 +309,6 @@ function insert_sub_category(){
         $cat_id       = $_POST['category'];
 
         if (empty($sub_cat_name)) {
-
             echo "
             <div class='col-md-12'>
               <div class='alert alert-danger alert-dismissable fade in'>

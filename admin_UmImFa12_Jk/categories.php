@@ -22,7 +22,7 @@
 
                         <!--Calling php function for inserting categories-->
                         <?php
-                        if (isset($_POST['add_item'])) {
+                        if (isset($_POST['submit_category'])) {
                             insert_category();
                             }
                         ?>
